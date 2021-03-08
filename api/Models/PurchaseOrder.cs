@@ -6,7 +6,7 @@ namespace api.Models
         public long Id { get; set; }
         public double Price { get; set; }
 
-        public long SupplierId { get; set; }
+        public Supplier Supplier { get; set; }
         public List<Product> Products { get; set; }
     }
 }
