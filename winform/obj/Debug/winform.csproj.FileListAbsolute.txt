@@ -11,3 +11,4 @@ C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.csproj.CoreCom
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.csproj.CopyComplete
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.exe
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.pdb
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\MaterialSkin.dll
