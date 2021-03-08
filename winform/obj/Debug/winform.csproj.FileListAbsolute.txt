@@ -1,11 +1,9 @@
-
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\winform.exe.config
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\winform.exe
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\winform.pdb
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\Newtonsoft.Json.dll
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\Newtonsoft.Json.xml
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.csprojAssemblyReference.cache
-C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.Form1.resources
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.Properties.Resources.resources
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.csproj.GenerateResource.cache
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.csproj.CoreCompileInputs.cache
@@ -13,3 +11,4 @@ C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.csproj.CopyCom
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.exe
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.pdb
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\MaterialSkin.dll
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.Wine.resources

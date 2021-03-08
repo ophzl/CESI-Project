@@ -8,12 +8,13 @@ using System.ComponentModel;
 using System.Collections.Generic;
 using MaterialSkin.Controls;
 using MaterialSkin;
+using winform.Models;
 
 namespace winform
 {
-    public partial class Form1 : MaterialForm
+    public partial class Wine : MaterialForm
     {
-        public Form1()
+        public Wine()
         {
             InitializeComponent();
 
@@ -24,21 +25,28 @@ namespace winform
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            try {
-                var url = "https://localhost:44343/weatherforecast";
+
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var url = "https://localhost:5001/weatherforecast";
                 var webRequest = (HttpWebRequest)WebRequest.Create(url);
                 var webResponse = (HttpWebResponse)webRequest.GetResponse();
 
                 if ((webResponse.StatusCode == HttpStatusCode.OK))
                 {
-                    /*var reader = new StreamReader(webResponse.GetResponseStream());
+                    var reader = new StreamReader(webResponse.GetResponseStream());
                     string s = reader.ReadToEnd();
-                    var arr = JsonConvert.DeserializeObject<List<Dto>>(s);
-                    var list = new BindingList<Dto>(arr);
+                    var arr = JsonConvert.DeserializeObject<List<Product>>(s);
+                    var list = new BindingList<Product>(arr);
                     var data = new BindingSource(list, null);
-                    dataGridView1.DataSource = data;*/
+                    dataGridView1.DataSource = data;
 
                 }
                 else
@@ -50,12 +58,8 @@ namespace winform
             {
                 Console.WriteLine(exception.Message);
             }
-            
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
