@@ -31,6 +31,7 @@
     ".NETCoreApp,Version=v3.1": {
       "api/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.3",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.3",
           "Microsoft.OpenApi": "1.2.3",
           "Swashbuckle.AspNetCore": "6.1.0",

@@ -70,3 +70,7 @@ C:\Users\user\Source\Repos\cesi-project\api\obj\Debug\netcoreapp3.1\api.csproj.C
 C:\Users\user\Source\Repos\cesi-project\api\obj\Debug\netcoreapp3.1\api.dll
 C:\Users\user\Source\Repos\cesi-project\api\obj\Debug\netcoreapp3.1\api.pdb
 C:\Users\user\Source\Repos\cesi-project\api\obj\Debug\netcoreapp3.1\api.genruntimeconfig.cache
+C:\Users\user\source\repos\cesi-project\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\source\repos\cesi-project\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\source\repos\cesi-project\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\source\repos\cesi-project\api\obj\Debug\netcoreapp3.1\api.MvcApplicationPartsAssemblyInfo.cs
