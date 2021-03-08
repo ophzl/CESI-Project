@@ -12,3 +12,17 @@ C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.exe
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.pdb
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\MaterialSkin.dll
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.Wine.resources
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\winform.exe.config
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\winform.exe
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\winform.pdb
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\MaterialSkin.dll
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.csprojAssemblyReference.cache
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.Wine.resources
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.Properties.Resources.resources
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.csproj.GenerateResource.cache
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.csproj.CoreCompileInputs.cache
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.csproj.CopyComplete
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.exe
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.pdb
