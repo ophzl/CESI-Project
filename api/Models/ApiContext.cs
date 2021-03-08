@@ -18,5 +18,6 @@ namespace api.Models
         public DbSet<SaleOrder> SaleOrders { get; set; }
 
         public DbSet<api.Models.PurchaseOrder> PurchaseOrder { get; set; }
+        public DbSet<api.Models.Token> Tokens { get; set; }
     }
 }
