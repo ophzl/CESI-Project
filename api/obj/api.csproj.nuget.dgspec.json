@@ -51,6 +51,10 @@
             "Microsoft.OpenApi": {
               "target": "Package",
               "version": "[1.2.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
             }
           },
           "imports": [
