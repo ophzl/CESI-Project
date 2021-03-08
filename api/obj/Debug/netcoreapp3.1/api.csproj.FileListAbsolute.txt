@@ -34,3 +34,7 @@ C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet 
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\cesi-wine\api\obj\Debug\netcoreapp3.1\api.pdb
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\cesi-wine\api\obj\Debug\netcoreapp3.1\api.genruntimeconfig.cache
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\cesi-wine\api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\cesi-wine\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\cesi-wine\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\cesi-wine\api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\cesi-wine\api\obj\Debug\netcoreapp3.1\api.MvcApplicationPartsAssemblyInfo.cs
