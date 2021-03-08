@@ -10,5 +10,7 @@ namespace api.Models
         public long Id { get; set; }
         public string token { get; set; }
         public DateTime createdAt { get; set; }
+
+        public Customer customer { get; set; }
     }
 }
