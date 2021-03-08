@@ -18,7 +18,8 @@ namespace winform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var url = "https://localhost:5001/weatherforecast";
+
+            var url = "https://localhost:44343/weatherforecast";
             var webRequest = (HttpWebRequest)WebRequest.Create(url);
             var webResponse = (HttpWebResponse)webRequest.GetResponse();
 
