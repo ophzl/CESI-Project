@@ -105,8 +105,8 @@ namespace web.Controllers
             {
                 try
                 {
-                    string familyJson = JsonConvert.SerializeObject(customer);
-                    HttpContent content = new StringContent(familyJson, Encoding.UTF8, "application/json");
+                    string customerJson = JsonConvert.SerializeObject(customer);
+                    HttpContent content = new StringContent(customerJson, Encoding.UTF8, "application/json");
                     var t = await Task.Run(() => PutURI(new Uri("https://localhost:5001/api/Customers/" + customer.Id), content));
                     return RedirectToAction(nameof(Edit));
                 }
