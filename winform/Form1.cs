@@ -33,14 +33,14 @@ namespace winform
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            var materialSkinManager = MaterialSkinManager.Instance;
+            /*var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Purple800, Primary.Purple900, Primary.Purple500, Accent.Purple200, TextShade.WHITE);
-
+            */
             try
             {
-                var url = "https://localhost:5001/weatherforecast";
+                var url = "https://localhost:5001/api/products/";
                 var webRequest = (HttpWebRequest)WebRequest.Create(url);
                 var webResponse = (HttpWebResponse)webRequest.GetResponse();
 

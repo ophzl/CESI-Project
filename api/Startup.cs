@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using api.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
 
@@ -29,8 +30,7 @@ namespace api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApiContext>(opt =>
-                                              opt.UseInMemoryDatabase("api"));
+            services.AddDbContext<ApiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ApiContext")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
