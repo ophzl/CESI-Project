@@ -68,6 +68,9 @@ namespace api.Migrations
                     b.Property<long?>("WineFamilyId")
                         .HasColumnType("bigint");
 
+                    b.Property<long>("WineFamily_Id")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("PurchaseOrderId");
@@ -92,6 +95,9 @@ namespace api.Migrations
                     b.Property<long?>("SupplierId")
                         .HasColumnType("bigint");
 
+                    b.Property<long>("Supplier_Id")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("SupplierId");
@@ -107,6 +113,9 @@ namespace api.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<long?>("CustomerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Customer_Id")
                         .HasColumnType("bigint");
 
                     b.Property<double>("Total")
@@ -144,18 +153,16 @@ namespace api.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("createdAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<long?>("customerId")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("token")
+                    b.Property<string>("Bearer")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
-                    b.HasIndex("customerId");
+                    b.Property<long>("Customer_Id")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Tokens");
                 });
@@ -208,15 +215,6 @@ namespace api.Migrations
                         .HasForeignKey("CustomerId");
 
                     b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("api.Models.Token", b =>
-                {
-                    b.HasOne("api.Models.Customer", "customer")
-                        .WithMany()
-                        .HasForeignKey("customerId");
-
-                    b.Navigation("customer");
                 });
 
             modelBuilder.Entity("api.Models.PurchaseOrder", b =>

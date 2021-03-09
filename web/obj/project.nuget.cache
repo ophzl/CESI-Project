@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+0bTCminllFuGVaWE34YKH7gkeIZwGBbF/QbwDwzoWMfOSVR0aomd5a3EkoG86MKxFfGVBVJ8XD90Cho9PtY6w==",
+  "dgSpecHash": "gxgsrvcuCAYt4Jmj/BEkF6jt9Mq8hTDP/cUjdsc7m2LDlzZAm3edNgacbAReAkV6Z/PgKFPs6jbFEdXaYd1Gtg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\web\\web.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
-}
+  "expectedPackageFiles": [
+    "C:\\Users\\Anatole\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],

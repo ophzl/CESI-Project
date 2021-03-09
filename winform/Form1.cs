@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using MaterialSkin.Controls;
 using MaterialSkin;
 using winform.Models;
+using winform.forms;
 
 namespace winform
 {
@@ -23,13 +24,11 @@ namespace winform
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Purple800, Primary.Purple900, Primary.Purple500, Accent.Purple200, TextShade.WHITE);
 
-        }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            this.formCustomer = new CustormerForm();
+            this.formCustomer.Visible = false;
 
         }
+        CustormerForm formCustomer;
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
@@ -183,6 +182,16 @@ namespace winform
         private void materialFlatButton9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void materialFlatButton4_Click(object sender, EventArgs e)
+        {
+            this.formCustomer.Visible = true;
         }
     }
 }
