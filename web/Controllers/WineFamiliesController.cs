@@ -82,7 +82,7 @@ namespace web.Controllers
             {
                 string familyJson = JsonConvert.SerializeObject(family);
                 HttpContent content = new StringContent(familyJson, Encoding.UTF8, "application/json");
-                var t = await Task.Run(() => SendURI(new Uri("https://localhost:44343/api/WineFamilies"), content));
+                var t = await Task.Run(() => SendURI(new Uri("https://localhost:5001/api/WineFamilies"), content));
                 return View(family);
             }
             catch (Exception e)
