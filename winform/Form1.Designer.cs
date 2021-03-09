@@ -35,13 +35,33 @@ namespace winform
             this.wines = new System.Windows.Forms.TabPage();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.clients = new System.Windows.Forms.TabPage();
+            this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.Wine_Family = new System.Windows.Forms.TabPage();
+            this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.materialFlatButton6 = new MaterialSkin.Controls.MaterialFlatButton();
             this.suppliers = new System.Windows.Forms.TabPage();
+            this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.materialFlatButton8 = new MaterialSkin.Controls.MaterialFlatButton();
             this.suppliers_orders = new System.Windows.Forms.TabPage();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.materialFlatButton9 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.materialFlatButton10 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             this.wines.SuspendLayout();
+            this.clients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Wine_Family.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.suppliers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.suppliers_orders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
             // materialFlatButton1
@@ -120,6 +140,9 @@ namespace winform
             // 
             // clients
             // 
+            this.clients.Controls.Add(this.materialFlatButton4);
+            this.clients.Controls.Add(this.dataGridView2);
+            this.clients.Controls.Add(this.materialFlatButton3);
             this.clients.Cursor = System.Windows.Forms.Cursors.Default;
             this.clients.Location = new System.Drawing.Point(4, 25);
             this.clients.Name = "clients";
@@ -129,8 +152,56 @@ namespace winform
             this.clients.Text = "Clients";
             this.clients.UseVisualStyleBackColor = true;
             // 
+            // materialFlatButton4
+            // 
+            this.materialFlatButton4.AutoSize = true;
+            this.materialFlatButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton4.Depth = 0;
+            this.materialFlatButton4.Icon = null;
+            this.materialFlatButton4.Location = new System.Drawing.Point(1005, 494);
+            this.materialFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton4.Name = "materialFlatButton4";
+            this.materialFlatButton4.Primary = false;
+            this.materialFlatButton4.Size = new System.Drawing.Size(74, 36);
+            this.materialFlatButton4.TabIndex = 5;
+            this.materialFlatButton4.Text = "Créer";
+            this.materialFlatButton4.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(8, 13);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1071, 472);
+            this.dataGridView2.TabIndex = 4;
+            // 
+            // materialFlatButton3
+            // 
+            this.materialFlatButton3.AutoSize = true;
+            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton3.Depth = 0;
+            this.materialFlatButton3.Icon = null;
+            this.materialFlatButton3.Location = new System.Drawing.Point(9, 494);
+            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton3.Name = "materialFlatButton3";
+            this.materialFlatButton3.Primary = false;
+            this.materialFlatButton3.Size = new System.Drawing.Size(123, 36);
+            this.materialFlatButton3.TabIndex = 3;
+            this.materialFlatButton3.Text = "Actualiser";
+            this.materialFlatButton3.UseVisualStyleBackColor = false;
+            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
+            // 
             // Wine_Family
             // 
+            this.Wine_Family.Controls.Add(this.materialFlatButton5);
+            this.Wine_Family.Controls.Add(this.dataGridView3);
+            this.Wine_Family.Controls.Add(this.materialFlatButton6);
             this.Wine_Family.Cursor = System.Windows.Forms.Cursors.Default;
             this.Wine_Family.Location = new System.Drawing.Point(4, 25);
             this.Wine_Family.Name = "Wine_Family";
@@ -140,8 +211,56 @@ namespace winform
             this.Wine_Family.Text = "Familles de vin";
             this.Wine_Family.UseVisualStyleBackColor = true;
             // 
+            // materialFlatButton5
+            // 
+            this.materialFlatButton5.AutoSize = true;
+            this.materialFlatButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton5.Depth = 0;
+            this.materialFlatButton5.Icon = null;
+            this.materialFlatButton5.Location = new System.Drawing.Point(1005, 494);
+            this.materialFlatButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton5.Name = "materialFlatButton5";
+            this.materialFlatButton5.Primary = false;
+            this.materialFlatButton5.Size = new System.Drawing.Size(74, 36);
+            this.materialFlatButton5.TabIndex = 8;
+            this.materialFlatButton5.Text = "Créer";
+            this.materialFlatButton5.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(8, 13);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1071, 472);
+            this.dataGridView3.TabIndex = 7;
+            // 
+            // materialFlatButton6
+            // 
+            this.materialFlatButton6.AutoSize = true;
+            this.materialFlatButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton6.Depth = 0;
+            this.materialFlatButton6.Icon = null;
+            this.materialFlatButton6.Location = new System.Drawing.Point(9, 494);
+            this.materialFlatButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton6.Name = "materialFlatButton6";
+            this.materialFlatButton6.Primary = false;
+            this.materialFlatButton6.Size = new System.Drawing.Size(123, 36);
+            this.materialFlatButton6.TabIndex = 6;
+            this.materialFlatButton6.Text = "Actualiser";
+            this.materialFlatButton6.UseVisualStyleBackColor = false;
+            this.materialFlatButton6.Click += new System.EventHandler(this.materialFlatButton6_Click);
+            // 
             // suppliers
             // 
+            this.suppliers.Controls.Add(this.materialFlatButton7);
+            this.suppliers.Controls.Add(this.dataGridView4);
+            this.suppliers.Controls.Add(this.materialFlatButton8);
             this.suppliers.Cursor = System.Windows.Forms.Cursors.Default;
             this.suppliers.Location = new System.Drawing.Point(4, 25);
             this.suppliers.Name = "suppliers";
@@ -150,8 +269,56 @@ namespace winform
             this.suppliers.Text = "Fournisseurs";
             this.suppliers.UseVisualStyleBackColor = true;
             // 
+            // materialFlatButton7
+            // 
+            this.materialFlatButton7.AutoSize = true;
+            this.materialFlatButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton7.Depth = 0;
+            this.materialFlatButton7.Icon = null;
+            this.materialFlatButton7.Location = new System.Drawing.Point(1005, 494);
+            this.materialFlatButton7.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton7.Name = "materialFlatButton7";
+            this.materialFlatButton7.Primary = false;
+            this.materialFlatButton7.Size = new System.Drawing.Size(74, 36);
+            this.materialFlatButton7.TabIndex = 11;
+            this.materialFlatButton7.Text = "Créer";
+            this.materialFlatButton7.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(8, 13);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.Size = new System.Drawing.Size(1071, 472);
+            this.dataGridView4.TabIndex = 10;
+            // 
+            // materialFlatButton8
+            // 
+            this.materialFlatButton8.AutoSize = true;
+            this.materialFlatButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton8.Depth = 0;
+            this.materialFlatButton8.Icon = null;
+            this.materialFlatButton8.Location = new System.Drawing.Point(9, 494);
+            this.materialFlatButton8.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton8.Name = "materialFlatButton8";
+            this.materialFlatButton8.Primary = false;
+            this.materialFlatButton8.Size = new System.Drawing.Size(123, 36);
+            this.materialFlatButton8.TabIndex = 9;
+            this.materialFlatButton8.Text = "Actualiser";
+            this.materialFlatButton8.UseVisualStyleBackColor = false;
+            this.materialFlatButton8.Click += new System.EventHandler(this.materialFlatButton8_Click);
+            // 
             // suppliers_orders
             // 
+            this.suppliers_orders.Controls.Add(this.materialFlatButton9);
+            this.suppliers_orders.Controls.Add(this.dataGridView5);
+            this.suppliers_orders.Controls.Add(this.materialFlatButton10);
             this.suppliers_orders.Cursor = System.Windows.Forms.Cursors.Default;
             this.suppliers_orders.Location = new System.Drawing.Point(4, 25);
             this.suppliers_orders.Name = "suppliers_orders";
@@ -173,6 +340,52 @@ namespace winform
             this.materialTabSelector1.TabIndex = 4;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
+            // materialFlatButton9
+            // 
+            this.materialFlatButton9.AutoSize = true;
+            this.materialFlatButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton9.Depth = 0;
+            this.materialFlatButton9.Icon = null;
+            this.materialFlatButton9.Location = new System.Drawing.Point(1005, 494);
+            this.materialFlatButton9.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton9.Name = "materialFlatButton9";
+            this.materialFlatButton9.Primary = false;
+            this.materialFlatButton9.Size = new System.Drawing.Size(74, 36);
+            this.materialFlatButton9.TabIndex = 14;
+            this.materialFlatButton9.Text = "Créer";
+            this.materialFlatButton9.UseVisualStyleBackColor = false;
+            this.materialFlatButton9.Click += new System.EventHandler(this.materialFlatButton9_Click);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(8, 13);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.Size = new System.Drawing.Size(1071, 472);
+            this.dataGridView5.TabIndex = 13;
+            // 
+            // materialFlatButton10
+            // 
+            this.materialFlatButton10.AutoSize = true;
+            this.materialFlatButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton10.Depth = 0;
+            this.materialFlatButton10.Icon = null;
+            this.materialFlatButton10.Location = new System.Drawing.Point(9, 494);
+            this.materialFlatButton10.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton10.Name = "materialFlatButton10";
+            this.materialFlatButton10.Primary = false;
+            this.materialFlatButton10.Size = new System.Drawing.Size(123, 36);
+            this.materialFlatButton10.TabIndex = 12;
+            this.materialFlatButton10.Text = "Actualiser";
+            this.materialFlatButton10.UseVisualStyleBackColor = false;
+            this.materialFlatButton10.Click += new System.EventHandler(this.materialFlatButton10_Click);
+            // 
             // Wine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,12 +394,24 @@ namespace winform
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
             this.Name = "Wine";
-            this.Text = "Wine";
+            this.Text = "WineNot";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.materialTabControl1.ResumeLayout(false);
             this.wines.ResumeLayout(false);
             this.wines.PerformLayout();
+            this.clients.ResumeLayout(false);
+            this.clients.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Wine_Family.ResumeLayout(false);
+            this.Wine_Family.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.suppliers.ResumeLayout(false);
+            this.suppliers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.suppliers_orders.ResumeLayout(false);
+            this.suppliers_orders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,6 +428,18 @@ namespace winform
         private System.Windows.Forms.TabPage Wine_Family;
         private System.Windows.Forms.TabPage suppliers;
         private System.Windows.Forms.TabPage suppliers_orders;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton4;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton5;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton6;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton7;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton8;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton9;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton10;
     }
 }
 
