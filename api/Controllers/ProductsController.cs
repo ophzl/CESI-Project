@@ -79,6 +79,10 @@ namespace api.Controllers
         {
             _context.Products.Add(product);
 
+            if(!product.WineFamily_Id.Equals(null)) {
+                product.WineFamily = _context.WineFamilies.Find((long) product.WineFamily_Id);
+            }
+
             _context.Stocks.Add(new Stock {
                 Product = product,
                 Quantity = 0
