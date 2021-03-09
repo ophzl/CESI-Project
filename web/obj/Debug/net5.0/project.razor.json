@@ -15618,6 +15618,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\WineFamilies\\Edit.cshtml",
+      "TargetPath": "Views\\WineFamilies\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -15625,6 +15630,11 @@
     {
       "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\WineFamilies\\Create.cshtml",
+      "TargetPath": "Views\\WineFamilies\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
