@@ -12,9 +12,9 @@ using winform.Models;
 
 namespace winform
 {
-    public partial class WineNot : MaterialForm
+    public partial class Wine : MaterialForm
     {
-        public WineNot()
+        public Wine()
         {
             InitializeComponent();
 
