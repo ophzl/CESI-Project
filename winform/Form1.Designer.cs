@@ -47,10 +47,10 @@ namespace winform
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.materialFlatButton8 = new MaterialSkin.Controls.MaterialFlatButton();
             this.suppliers_orders = new System.Windows.Forms.TabPage();
-            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialFlatButton9 = new MaterialSkin.Controls.MaterialFlatButton();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.materialFlatButton10 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             this.wines.SuspendLayout();
@@ -137,6 +137,7 @@ namespace winform
             this.materialFlatButton2.TabIndex = 4;
             this.materialFlatButton2.Text = "Créer";
             this.materialFlatButton2.UseVisualStyleBackColor = false;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // clients
             // 
@@ -168,6 +169,7 @@ namespace winform
             this.materialFlatButton4.TabIndex = 5;
             this.materialFlatButton4.Text = "Créer";
             this.materialFlatButton4.UseVisualStyleBackColor = false;
+            this.materialFlatButton4.Click += new System.EventHandler(this.materialFlatButton4_Click);
             // 
             // dataGridView2
             // 
@@ -327,19 +329,6 @@ namespace winform
             this.suppliers_orders.Text = "Commandes fournisseurs";
             this.suppliers_orders.UseVisualStyleBackColor = true;
             // 
-            // materialTabSelector1
-            // 
-            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
-            this.materialTabSelector1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(-1, 64);
-            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Padding = new System.Windows.Forms.Padding(20);
-            this.materialTabSelector1.Size = new System.Drawing.Size(1094, 29);
-            this.materialTabSelector1.TabIndex = 4;
-            this.materialTabSelector1.Text = "materialTabSelector1";
-            // 
             // materialFlatButton9
             // 
             this.materialFlatButton9.AutoSize = true;
@@ -386,6 +375,19 @@ namespace winform
             this.materialFlatButton10.UseVisualStyleBackColor = false;
             this.materialFlatButton10.Click += new System.EventHandler(this.materialFlatButton10_Click);
             // 
+            // materialTabSelector1
+            // 
+            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
+            this.materialTabSelector1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialTabSelector1.Depth = 0;
+            this.materialTabSelector1.Location = new System.Drawing.Point(-1, 64);
+            this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialTabSelector1.Name = "materialTabSelector1";
+            this.materialTabSelector1.Padding = new System.Windows.Forms.Padding(20);
+            this.materialTabSelector1.Size = new System.Drawing.Size(1094, 29);
+            this.materialTabSelector1.TabIndex = 4;
+            this.materialTabSelector1.Text = "materialTabSelector1";
+            // 
             // Wine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -395,7 +397,6 @@ namespace winform
             this.Controls.Add(this.materialTabControl1);
             this.Name = "Wine";
             this.Text = "WineNot";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.materialTabControl1.ResumeLayout(false);
             this.wines.ResumeLayout(false);
