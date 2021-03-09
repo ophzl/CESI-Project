@@ -229,6 +229,7 @@ namespace winform
             this.materialFlatButton5.TabIndex = 8;
             this.materialFlatButton5.Text = "Créer";
             this.materialFlatButton5.UseVisualStyleBackColor = false;
+            this.materialFlatButton5.Click += new System.EventHandler(this.materialFlatButton5_Click);
             // 
             // dataGridView3
             // 
@@ -287,6 +288,7 @@ namespace winform
             this.materialFlatButton7.TabIndex = 11;
             this.materialFlatButton7.Text = "Créer";
             this.materialFlatButton7.UseVisualStyleBackColor = false;
+            this.materialFlatButton7.Click += new System.EventHandler(this.materialFlatButton7_Click);
             // 
             // dataGridView4
             // 

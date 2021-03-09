@@ -68,3 +68,5 @@ C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Threading.Tasks
 C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.ValueTuple.xml
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.CustormerForm.resources
 >>>>>>> e55b3521739f79006c5775cf7b56a3fcfba304a9
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.WineFamilyForm.resources
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.SupplierForm.resources

@@ -25,11 +25,17 @@ namespace winform
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Purple800, Primary.Purple900, Primary.Purple500, Accent.Purple200, TextShade.WHITE);
             this.formProduct = new ProductForm();
             this.formCustomer = new CustormerForm();
+            this.formWineFamily = new WineFamilyForm();
+            this.formSupplier = new SupplierForm();
             this.formProduct.Visible = false;
             this.formCustomer.Visible = false;
+            this.formWineFamily.Visible = false;
+            this.formSupplier.Visible = false;
         }
         CustormerForm formCustomer;
         ProductForm formProduct;
+        WineFamilyForm formWineFamily;
+        SupplierForm formSupplier;
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
@@ -189,6 +195,17 @@ namespace winform
         {
                 this.formCustomer.Visible = true;
         }
+
+        private void materialFlatButton5_Click(object sender, EventArgs e)
+        {
+            this.formWineFamily.Visible = true;
+        }
+
+        private void materialFlatButton7_Click(object sender, EventArgs e)
+        {
+            this.formSupplier.Visible = true;
+        }
+
         private void materialFlatButton9_Click(object sender, EventArgs e)
         {
 

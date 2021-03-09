@@ -1,7 +1,7 @@
 ﻿
 namespace winform.forms
 {
-    partial class ProductForm
+    partial class SupplierForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,10 +35,6 @@ namespace winform.forms
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.nom = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Annuler
@@ -47,7 +43,7 @@ namespace winform.forms
             this.Annuler.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Annuler.Depth = 0;
             this.Annuler.Icon = null;
-            this.Annuler.Location = new System.Drawing.Point(222, 367);
+            this.Annuler.Location = new System.Drawing.Point(222, 311);
             this.Annuler.MouseState = MaterialSkin.MouseState.HOVER;
             this.Annuler.Name = "Annuler";
             this.Annuler.Primary = true;
@@ -63,7 +59,7 @@ namespace winform.forms
             this.Envoyer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Envoyer.Depth = 0;
             this.Envoyer.Icon = null;
-            this.Envoyer.Location = new System.Drawing.Point(484, 367);
+            this.Envoyer.Location = new System.Drawing.Point(484, 311);
             this.Envoyer.MouseState = MaterialSkin.MouseState.HOVER;
             this.Envoyer.Name = "Envoyer";
             this.Envoyer.Primary = true;
@@ -77,16 +73,16 @@ namespace winform.forms
             // 
             this.Addresse.AutoSize = true;
             this.Addresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addresse.Location = new System.Drawing.Point(218, 191);
+            this.Addresse.Location = new System.Drawing.Point(218, 217);
             this.Addresse.Name = "Addresse";
-            this.Addresse.Size = new System.Drawing.Size(42, 24);
+            this.Addresse.Size = new System.Drawing.Size(91, 24);
             this.Addresse.TabIndex = 9;
-            this.Addresse.Text = "Prix";
+            this.Addresse.Text = "Addresse";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(222, 224);
+            this.textBox2.Location = new System.Drawing.Point(222, 250);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(218, 28);
             this.textBox2.TabIndex = 8;
@@ -109,61 +105,19 @@ namespace winform.forms
             this.textBox1.Size = new System.Drawing.Size(125, 28);
             this.textBox1.TabIndex = 6;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(218, 270);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 24);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Prix de vente";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(222, 303);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(218, 28);
-            this.textBox3.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(442, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 24);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Famille";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(446, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 30);
-            this.comboBox1.TabIndex = 16;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // ProductForm
+            // SupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Annuler);
             this.Controls.Add(this.Envoyer);
             this.Controls.Add(this.Addresse);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.nom);
             this.Controls.Add(this.textBox1);
-            this.Name = "ProductForm";
-            this.Text = "Ajout d\'un nouveau vin";
+            this.Name = "SupplierForm";
+            this.Text = "Créer un fournisseur";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,9 +131,5 @@ namespace winform.forms
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label nom;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
