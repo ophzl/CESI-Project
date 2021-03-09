@@ -18,7 +18,6 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\winform.pdb
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\MaterialSkin.dll
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.csprojAssemblyReference.cache
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.Wine.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.Properties.Resources.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.csproj.GenerateResource.cache
