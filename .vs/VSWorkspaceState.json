@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\api\\Models",
+    "\\winform"
   ],
+  "SelectedNode": "\\cesi-wine.sln",
   "PreviewInSolutionExplorer": false
 }

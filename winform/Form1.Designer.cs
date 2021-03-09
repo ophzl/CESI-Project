@@ -1,7 +1,7 @@
 ﻿
 namespace winform
 {
-    partial class Wine
+    partial class WineNot
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -124,7 +124,7 @@ namespace winform
             this.clients.Location = new System.Drawing.Point(4, 25);
             this.clients.Name = "clients";
             this.clients.Padding = new System.Windows.Forms.Padding(3);
-            this.clients.Size = new System.Drawing.Size(793, 438);
+            this.clients.Size = new System.Drawing.Size(1086, 438);
             this.clients.TabIndex = 1;
             this.clients.Text = "Clients";
             this.clients.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@ namespace winform
             this.Wine_Family.Location = new System.Drawing.Point(4, 25);
             this.Wine_Family.Name = "Wine_Family";
             this.Wine_Family.Padding = new System.Windows.Forms.Padding(3);
-            this.Wine_Family.Size = new System.Drawing.Size(793, 438);
+            this.Wine_Family.Size = new System.Drawing.Size(1086, 438);
             this.Wine_Family.TabIndex = 2;
             this.Wine_Family.Text = "Familles de vin";
             this.Wine_Family.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@ namespace winform
             this.suppliers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.suppliers.Location = new System.Drawing.Point(4, 25);
             this.suppliers.Name = "suppliers";
-            this.suppliers.Size = new System.Drawing.Size(793, 438);
+            this.suppliers.Size = new System.Drawing.Size(1086, 438);
             this.suppliers.TabIndex = 3;
             this.suppliers.Text = "Fournisseurs";
             this.suppliers.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@ namespace winform
             this.suppliers_orders.Cursor = System.Windows.Forms.Cursors.Hand;
             this.suppliers_orders.Location = new System.Drawing.Point(4, 25);
             this.suppliers_orders.Name = "suppliers_orders";
-            this.suppliers_orders.Size = new System.Drawing.Size(793, 438);
+            this.suppliers_orders.Size = new System.Drawing.Size(1086, 438);
             this.suppliers_orders.TabIndex = 4;
             this.suppliers_orders.Text = "Commandes fournisseurs";
             this.suppliers_orders.UseVisualStyleBackColor = true;
@@ -172,15 +172,15 @@ namespace winform
             this.materialTabSelector1.TabIndex = 4;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // Wine
+            // WineNot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 577);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
-            this.Name = "Wine";
-            this.Text = "Wine";
+            this.Name = "WineNot";
+            this.Text = "WineNot";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.materialTabControl1.ResumeLayout(false);

@@ -16,7 +16,7 @@ namespace winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Wine());
+            Application.Run(new WineNot());
         }
     }
 }
