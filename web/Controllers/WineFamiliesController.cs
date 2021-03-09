@@ -8,7 +8,6 @@ using web.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Text;
-using RestSharp;
 
 namespace web.Controllers
 {
@@ -86,7 +85,7 @@ namespace web.Controllers
                 var t = await Task.Run(() => SendURI(new Uri("https://localhost:44343/api/WineFamilies"), content));
                 return View(family);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return View();
             }
@@ -100,19 +99,18 @@ namespace web.Controllers
 
         // POST: WineFamilies/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] WineFamily family)
         {
-            if (id != family.Id)
+            if (id == family.Id)
             {
                 try
                 {
                     string familyJson = JsonConvert.SerializeObject(family);
                     HttpContent content = new StringContent(familyJson, Encoding.UTF8, "application/json");
-                    var t = await Task.Run(() => PutURI(new Uri("https://localhost:44343/api/WineFamilies" + family.Id), content));
-                    return View(family);
+                    var t = await Task.Run(() => PutURI(new Uri("https://localhost:5001/api/WineFamilies/" + family.Id), content));
+                    return RedirectToAction(nameof(Edit));
                 }
-                catch
+                catch(Exception e)
                 {
                     return View();
                 }
