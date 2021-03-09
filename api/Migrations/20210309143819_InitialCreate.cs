@@ -38,6 +38,21 @@ namespace api.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Tokens",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Bearer = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Customer_Id = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tokens", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "WineFamilies",
                 columns: table => new
                 {
@@ -57,7 +72,8 @@ namespace api.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Total = table.Column<double>(type: "float", nullable: false),
-                    CustomerId = table.Column<long>(type: "bigint", nullable: true)
+                    CustomerId = table.Column<long>(type: "bigint", nullable: true),
+                    Customer_Id = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -71,34 +87,14 @@ namespace api.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tokens",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    token = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    createdAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    customerId = table.Column<long>(type: "bigint", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tokens", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Tokens_Customers_customerId",
-                        column: x => x.customerId,
-                        principalTable: "Customers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PurchaseOrder",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Price = table.Column<double>(type: "float", nullable: false),
-                    SupplierId = table.Column<long>(type: "bigint", nullable: true)
+                    SupplierId = table.Column<long>(type: "bigint", nullable: true),
+                    Supplier_Id = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,6 +117,7 @@ namespace api.Migrations
                     Price = table.Column<double>(type: "float", nullable: false),
                     SellPrice = table.Column<double>(type: "float", nullable: false),
                     WineFamilyId = table.Column<long>(type: "bigint", nullable: true),
+                    WineFamily_Id = table.Column<long>(type: "bigint", nullable: false),
                     PurchaseOrderId = table.Column<long>(type: "bigint", nullable: true),
                     SaleOrderId = table.Column<long>(type: "bigint", nullable: true)
                 },
@@ -171,11 +168,6 @@ namespace api.Migrations
                 name: "IX_SaleOrders_CustomerId",
                 table: "SaleOrders",
                 column: "CustomerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Tokens_customerId",
-                table: "Tokens",
-                column: "customerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
