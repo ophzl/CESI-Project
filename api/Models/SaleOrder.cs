@@ -10,6 +10,7 @@ namespace api.Models
 
         public List<Product> Products { get; set; }
         public Customer Customer { get; set; }
+        public long Customer_Id { get; set; }
 
     }
 
