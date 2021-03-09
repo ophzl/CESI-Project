@@ -15603,6 +15603,11 @@
   "RootNamespace": "web",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Products\\Create.cshtml",
+      "TargetPath": "Views\\Products\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -15633,6 +15638,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Customers\\Create.cshtml",
+      "TargetPath": "Views\\Customers\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\WineFamilies\\Create.cshtml",
       "TargetPath": "Views\\WineFamilies\\Create.cshtml",
       "FileKind": "mvc"
@@ -15640,6 +15650,11 @@
     {
       "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Suppliers\\Create.cshtml",
+      "TargetPath": "Views\\Suppliers\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -78,6 +78,15 @@ namespace api.Controllers
         public async Task<ActionResult<SaleOrder>> PostSaleOrder(SaleOrder saleOrder)
         {
             _context.SaleOrders.Add(saleOrder);
+
+            // Changes the stock for each products of SaleOrders.products
+            saleOrder.Products.ForEach(async elem =>
+            {
+                var stock = await _context.Stocks.Where(e => e.Id == elem.Id).FirstOrDefaultAsync();
+                stock.Quantity--;
+
+            });
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetSaleOrder", new { id = saleOrder.Id }, saleOrder);

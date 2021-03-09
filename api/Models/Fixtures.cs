@@ -106,6 +106,29 @@ namespace api.Models
                     );
                 }
 
+                if (!context.Stocks.Any())
+                {
+                    context.Stocks.AddRange(
+                        new Stock
+                        {
+                            ProductId = 1,
+                            Quantity = 200
+                        }, new Stock
+                        {
+                            ProductId = 2,
+                            Quantity = 100
+                        }, new Stock
+                        {
+                            ProductId = 3,
+                            Quantity = 1400
+                        }, new Stock
+                        {
+                            ProductId = 4,
+                            Quantity = 10
+                        }
+                    );
+                }
+
                 context.SaveChanges();
             }
         }

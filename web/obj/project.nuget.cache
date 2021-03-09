@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QWqSeO21ImKwbenEtz8UMOwYmZw0a6mCMvHDnZh/IO+mfBf512JyehU90FzWEhfNyiGOxzbsokCP+cTaINdBIA==",
+  "dgSpecHash": "p2tq97wVQ1jhGvd8oZthI0gZLQan2YqiknpElBwsGa4huI/ZmahhmUBIoz/yewHfMNnZEHFV4o02/08Yx6jTVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\cesi-project\\web\\web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
