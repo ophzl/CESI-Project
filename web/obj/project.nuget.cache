@@ -6,12 +6,5 @@
   "expectedPackageFiles": [
     "C:\\Users\\Anatole\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\web\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'expectedPackageFiles', line 9, position 0."
-    }
-  ]
+  "logs": []
 }

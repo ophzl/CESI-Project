@@ -90,8 +90,7 @@ namespace winform.forms
             if (this.comboBox1.SelectedValue != null) {
                 var familyId = this.comboBox1.SelectedValue;
                 var familyIdConverted = this.comboBox1.SelectedItem.ToString();
-                product.WineFamily.Id = Convert.ToInt64(this.comboBox1.SelectedValue);
-                product.WineFamily.Name = this.comboBox1.SelectedItem.ToString();
+                product.WineFamily_Id = Convert.ToInt64(this.comboBox1.SelectedValue);
             }
             else
             {
