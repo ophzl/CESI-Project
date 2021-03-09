@@ -78,6 +78,14 @@ namespace api.Controllers
         public async Task<ActionResult<PurchaseOrder>> PostPurchaseOrder(PurchaseOrder purchaseOrder)
         {
             _context.PurchaseOrder.Add(purchaseOrder);
+
+            purchaseOrder.Products.ForEach(async elem =>
+                        {
+                            var stock = await _context.Stocks.Where(e => e.Id == elem.Id).FirstOrDefaultAsync();
+                            stock.Quantity++;
+
+                        });
+
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPurchaseOrder", new { id = purchaseOrder.Id }, purchaseOrder);

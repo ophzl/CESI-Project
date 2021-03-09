@@ -44,5 +44,27 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\System.Text.Json
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\bin\Debug\System.ValueTuple.xml
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.CustormerForm.resources
+<<<<<<< HEAD
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.ProductForm.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.csprojAssemblyReference.cache
+=======
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Buffers.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Memory.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Text.Json.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.ValueTuple.dll
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Buffers.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Memory.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Text.Json.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\user\source\repos\cesi-project\winform\bin\Debug\System.ValueTuple.xml
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.CustormerForm.resources
+>>>>>>> e55b3521739f79006c5775cf7b56a3fcfba304a9

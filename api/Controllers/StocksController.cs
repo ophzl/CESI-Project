@@ -11,47 +11,47 @@ namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class StocksController : ControllerBase
     {
         private readonly ApiContext _context;
 
-        public ProductsController(ApiContext context)
+        public StocksController(ApiContext context)
         {
             _context = context;
         }
 
-        // GET: api/Products
+        // GET: api/Stocks
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<Stock>>> GetStock()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Stocks.ToListAsync();
         }
 
-        // GET: api/Products/5
+        // GET: api/Stocks/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(long id)
+        public async Task<ActionResult<Stock>> GetStock(long id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var stock = await _context.Stocks.FindAsync(id);
 
-            if (product == null)
+            if (stock == null)
             {
                 return NotFound();
             }
 
-            return product;
+            return stock;
         }
 
-        // PUT: api/Products/5
+        // PUT: api/Stocks/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(long id, Product product)
+        public async Task<IActionResult> PutStock(long id, Stock Stock)
         {
-            if (id != product.Id)
+            if (id != Stock.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(product).State = EntityState.Modified;
+            _context.Entry(Stock).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +59,7 @@ namespace api.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(id))
+                if (!StockExists(id))
                 {
                     return NotFound();
                 }
@@ -72,42 +72,36 @@ namespace api.Controllers
             return NoContent();
         }
 
-        // POST: api/Products
+        // POST: api/Stocks
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Product>> PostProduct(Product product)
+        public async Task<ActionResult<Stock>> PostStock(Stock Stock)
         {
-            _context.Products.Add(product);
-
-            _context.Stocks.Add(new Stock {
-                Product = product,
-                Quantity = 0
-            });
-
+            _context.Stocks.Add(Stock);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+            return CreatedAtAction("GetStock", new { id = Stock.Id }, Stock);
         }
 
-        // DELETE: api/Products/5
+        // DELETE: api/Stocks/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduct(long id)
+        public async Task<IActionResult> DeleteStock(long id)
         {
-            var product = await _context.Products.FindAsync(id);
-            if (product == null)
+            var Stock = await _context.Stocks.FindAsync(id);
+            if (Stock == null)
             {
                 return NotFound();
             }
 
-            _context.Products.Remove(product);
+            _context.Stocks.Remove(Stock);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool ProductExists(long id)
+        private bool StockExists(long id)
         {
-            return _context.Products.Any(e => e.Id == id);
+            return _context.Stocks.Any(e => e.Id == id);
         }
     }
 }
