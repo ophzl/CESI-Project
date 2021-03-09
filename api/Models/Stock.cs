@@ -9,7 +9,7 @@ namespace api.Models
     {
         public long Id { get; set; }
         
-        public long ProductId { get; set; }
+        public Product Product { get; set; }
         public long Quantity { get; set; }
     }
 }

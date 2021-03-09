@@ -1,19 +1,17 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "p2tq97wVQ1jhGvd8oZthI0gZLQan2YqiknpElBwsGa4huI/ZmahhmUBIoz/yewHfMNnZEHFV4o02/08Yx6jTVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\cesi-project\\web\\web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\user\\source\\repos\\cesi-project\\web\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
-=======
-  "dgSpecHash": "gxgsrvcuCAYt4Jmj/BEkF6jt9Mq8hTDP/cUjdsc7m2LDlzZAm3edNgacbAReAkV6Z/PgKFPs6jbFEdXaYd1Gtg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\web\\web.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Anatole\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
-  ],
->>>>>>> aa56479600b12c6759c5a9b251495a9db717458e

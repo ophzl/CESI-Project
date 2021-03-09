@@ -82,7 +82,7 @@ namespace api.Controllers
             purchaseOrder.Products.ForEach(async elem =>
                         {
                             var stock = await _context.Stocks.Where(e => e.Id == elem.Id).FirstOrDefaultAsync();
-                            stock.Quantity--;
+                            stock.Quantity++;
 
                         });
 

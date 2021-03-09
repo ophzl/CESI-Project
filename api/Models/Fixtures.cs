@@ -16,7 +16,7 @@ namespace api.Models
             {
                 if (!context.WineFamilies.Any())
                 {
-                  
+
                     context.WineFamilies.AddRange(
                     new WineFamily
                     {
@@ -58,7 +58,7 @@ namespace api.Models
                             Price = 30.00,
                             SellPrice = 45.00,
                             WineFamily_Id = 2,
-                            
+
                         }, new Product
                         {
                             Name = "Hennessy, Paradis",
@@ -106,24 +106,55 @@ namespace api.Models
                     );
                 }
 
+                context.SaveChanges();
+
                 if (!context.Stocks.Any())
                 {
                     context.Stocks.AddRange(
                         new Stock
                         {
-                            ProductId = 1,
+                            Product = new Product
+                            {
+                                Id = 1,
+                                Name = "Dragon de Quintus, 2nd vin du Château Quintus, 2016",
+                                Price = 120.00,
+                                SellPrice = 179.99,
+                                WineFamily_Id = 1,
+                            },
                             Quantity = 200
                         }, new Stock
                         {
-                            ProductId = 2,
+                            Product = new Product
+                            {
+                                Id = 2,
+                                Name = "UBY N°4 Gros & Petit Manseng Doux, 2020",
+                                Price = 4.50,
+                                SellPrice = 7.90,
+                                WineFamily_Id = 3,
+                            },
                             Quantity = 100
                         }, new Stock
                         {
-                            ProductId = 3,
+                            Product = new Product
+                            {
+                                Id = 3,
+                                Name = "Château La Sauvageonne La Villa, 2019",
+                                Price = 30.00,
+                                SellPrice = 45.00,
+                                WineFamily_Id = 2,
+
+                            },
                             Quantity = 1400
                         }, new Stock
                         {
-                            ProductId = 4,
+                            Product = new Product
+                            {
+                                Id = 4,
+                                Name = "Hennessy, Paradis",
+                                Price = 1200.00,
+                                SellPrice = 1500.99,
+                                WineFamily_Id = 5,
+                            },
                             Quantity = 10
                         }
                     );
