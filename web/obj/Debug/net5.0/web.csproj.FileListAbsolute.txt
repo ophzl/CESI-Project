@@ -38,3 +38,9 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\ref\web.dll
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.pdb
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.genruntimeconfig.cache
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.csproj.CopyComplete
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Customers\Create.cshtml.g.cs
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Products\Create.cshtml.g.cs
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Suppliers\Create.cshtml.g.cs
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\WineFamilies\Create.cshtml.g.cs
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\WineFamilies\Edit.cshtml.g.cs
