@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 namespace winform.forms
 {
-    public partial class CustormerForm : MaterialForm
+    public partial class SupplierForm : MaterialForm
     {
-        public CustormerForm()
+        public SupplierForm()
         {
             InitializeComponent();
 
@@ -42,36 +42,28 @@ namespace winform.forms
             return response;
         }
 
-        private void CustormerForm_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void materialRaisedButton1_Click(object sender, EventArgs e)
-        {
-            var client = new Customer();
-            var name = this.textBox1.Text;
-            var addresse = this.textBox2.Text;
-            client.Name = name;
-            client.Address = addresse;
-            var jsonString = System.Text.Json.JsonSerializer.Serialize(client);
-
-            
-                HttpContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-                var t = await Task.Run(() => SendURI(new Uri("https://localhost:5001/api/Customers"), content));
-
-                this.Visible = false;
-           
-        }
-
-        private void Annuler_Click(object sender, EventArgs e)
+        private void Annuler_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
+        }
+
+        private async void Envoyer_Click(object sender, EventArgs e)
+        {
+
+            var supplier = new Supplier();
+            var name = this.textBox1.Text;
+            var addresse = this.textBox2.Text;
+            supplier.Name = name;
+            supplier.Address = addresse;
+            var jsonString = System.Text.Json.JsonSerializer.Serialize(supplier);
+
+
+            HttpContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            var t = await Task.Run(() => SendURI(new Uri("https://localhost:5001/api/Suppliers"), content));
+
+            this.Visible = false;
+
         }
     }
 }
