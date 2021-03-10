@@ -35,7 +35,7 @@ namespace web.Controllers
             JArray j = JArray.Parse(t.Result);
             foreach (var elem in j)
             {
-                products.Add(new Product((long)elem["id"],(string)elem["name"],(double)elem["price"]));
+                products.Add(new Product((long)elem["id"],(string)elem["name"],(double)elem["price"],(string)elem["house"]));
             }
             return View(products);
         }
@@ -51,7 +51,7 @@ namespace web.Controllers
             var t = Task.Run(() => GetURI(new Uri("https://localhost:5001/api/Products/" + id)));
             t.Wait();
             var j = JObject.Parse(t.Result);
-            Product product = new Product((int)j["id"], (string)j["name"], (double)j["price"]);
+            Product product = new Product((int)j["id"], (string)j["name"], (double)j["price"], (string)j["house"]);
             return View(product);
         }
 
