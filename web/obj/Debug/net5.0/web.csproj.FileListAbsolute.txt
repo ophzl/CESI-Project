@@ -87,3 +87,46 @@ C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet 
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\web.genruntimeconfig.cache
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Products\Details.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\appsettings.Development.json
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\appsettings.json
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.exe
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.deps.json
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.runtimeconfig.json
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.runtimeconfig.dev.json
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.dll
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\ref\web.dll
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.pdb
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.Views.dll
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\web.Views.pdb
+D:\RepositoryDev\cesi\c#\CESI-Project\web\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.csprojAssemblyReference.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.GeneratedMSBuildEditorConfig.editorconfig
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.AssemblyInfoInputs.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.AssemblyInfo.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.csproj.CoreCompileInputs.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.MvcApplicationPartsAssemblyInfo.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.RazorAssemblyInfo.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.RazorAssemblyInfo.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\staticwebassets\web.StaticWebAssets.Manifest.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\staticwebassets\web.StaticWebAssets.xml
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\scopedcss\bundle\web.styles.css
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.TagHelpers.input.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.TagHelpers.output.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.RazorCoreGenerate.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Home\_Layout.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Products\Details.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.RazorTargetAssemblyInfo.cache
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.RazorTargetAssemblyInfo.cs
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.Views.pdb
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.csproj.CopyComplete
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.dll
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\ref\web.dll
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.pdb
+D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.genruntimeconfig.cache
