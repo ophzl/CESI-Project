@@ -40,7 +40,7 @@ namespace winform.forms
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 136);
+            this.textBox1.Location = new System.Drawing.Point(241, 145);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 28);
             this.textBox1.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace winform.forms
             // 
             this.nom.AutoSize = true;
             this.nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nom.Location = new System.Drawing.Point(8, 103);
+            this.nom.Location = new System.Drawing.Point(237, 112);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(51, 24);
             this.nom.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace winform.forms
             // 
             this.Addresse.AutoSize = true;
             this.Addresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addresse.Location = new System.Drawing.Point(8, 216);
+            this.Addresse.Location = new System.Drawing.Point(237, 225);
             this.Addresse.Name = "Addresse";
             this.Addresse.Size = new System.Drawing.Size(91, 24);
             this.Addresse.TabIndex = 3;
@@ -69,7 +69,7 @@ namespace winform.forms
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(12, 249);
+            this.textBox2.Location = new System.Drawing.Point(241, 258);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(218, 28);
             this.textBox2.TabIndex = 2;
@@ -80,7 +80,7 @@ namespace winform.forms
             this.Envoyer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Envoyer.Depth = 0;
             this.Envoyer.Icon = null;
-            this.Envoyer.Location = new System.Drawing.Point(274, 310);
+            this.Envoyer.Location = new System.Drawing.Point(503, 319);
             this.Envoyer.MouseState = MaterialSkin.MouseState.HOVER;
             this.Envoyer.Name = "Envoyer";
             this.Envoyer.Primary = true;
@@ -96,7 +96,7 @@ namespace winform.forms
             this.Annuler.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Annuler.Depth = 0;
             this.Annuler.Icon = null;
-            this.Annuler.Location = new System.Drawing.Point(12, 310);
+            this.Annuler.Location = new System.Drawing.Point(241, 319);
             this.Annuler.MouseState = MaterialSkin.MouseState.HOVER;
             this.Annuler.Name = "Annuler";
             this.Annuler.Primary = true;
@@ -110,7 +110,7 @@ namespace winform.forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 358);
+            this.ClientSize = new System.Drawing.Size(800, 460);
             this.Controls.Add(this.Annuler);
             this.Controls.Add(this.Envoyer);
             this.Controls.Add(this.Addresse);

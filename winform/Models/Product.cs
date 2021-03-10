@@ -10,5 +10,6 @@ namespace winform.Models
         public double SellPrice { get; set; }
 
         public WineFamily WineFamily { get; set; }
+        public long WineFamily_Id { get; set; }
     }
 }

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 namespace winform.forms
 {
-    public partial class CustormerForm : MaterialForm
+    public partial class WineFamilyForm : MaterialForm
     {
-        public CustormerForm()
+        public WineFamilyForm()
         {
             InitializeComponent();
 
@@ -52,25 +52,22 @@ namespace winform.forms
 
         }
 
-        private async void materialRaisedButton1_Click(object sender, EventArgs e)
+        private void Annuler_Click_1(object sender, EventArgs e)
         {
-            var client = new Customer();
-            var name = this.textBox1.Text;
-            var addresse = this.textBox2.Text;
-            client.Name = name;
-            client.Address = addresse;
-            var jsonString = System.Text.Json.JsonSerializer.Serialize(client);
-
-            
-                HttpContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-                var t = await Task.Run(() => SendURI(new Uri("https://localhost:5001/api/Customers"), content));
-
-                this.Visible = false;
-           
+            this.Visible = false;
         }
 
-        private void Annuler_Click(object sender, EventArgs e)
+        private async void Envoyer_Click(object sender, EventArgs e)
         {
+
+            var family = new WineFamily();
+            var name = this.textBox1.Text;
+            family.Name = name;
+            var jsonString = System.Text.Json.JsonSerializer.Serialize(family);
+
+            HttpContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            var t = await Task.Run(() => SendURI(new Uri("https://localhost:5001/api/WineFamilies"), content));
+
             this.Visible = false;
         }
     }

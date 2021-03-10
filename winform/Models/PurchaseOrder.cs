@@ -6,7 +6,8 @@ namespace winform.Models
         public long Id { get; set; }
         public double Price { get; set; }
 
-        public Supplier Supplier { get; set; }
         public List<Product> Products { get; set; }
+        public Supplier Supplier { get; set; }
+        public long Supplier_Id { get; set; }
     }
 }
