@@ -28,9 +28,16 @@ namespace web.Controllers
             return response;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var t = Task.Run(() => GetURI(new Uri("https://localhost:5001/api/Products/")));
+            t.Wait();
+            JArray j = JArray.Parse(t.Result);
+            foreach (var elem in j)
+            {
+                products.Add(new Product((long)elem["id"],(string)elem["name"],(double)elem["price"]));
+            }
+            return View(products);
         }
 
         // GET: Products/Details/5

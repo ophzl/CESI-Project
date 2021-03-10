@@ -91,3 +91,4 @@ C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet 
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\web.pdb
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\web.genruntimeconfig.cache
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Products\Details.cshtml.g.cs
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
