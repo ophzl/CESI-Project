@@ -10,15 +10,15 @@ using api.Models;
 namespace api.Migrations
 {
     [DbContext(typeof(ApiContext))]
-    [Migration("20210309195601_RefModels")]
-    partial class RefModels
+    [Migration("20210310150805_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.3")
+                .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("api.Models.Customer", b =>
