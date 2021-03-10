@@ -77,14 +77,37 @@ namespace api.Controllers
         [HttpPost]
         public async Task<ActionResult<PurchaseOrder>> PostPurchaseOrder(PurchaseOrder purchaseOrder)
         {
-            _context.PurchaseOrders.Add(purchaseOrder);
 
-            purchaseOrder.Orders.ForEach(async elem =>
+            if (!purchaseOrder.Supplier_Id.Equals(null))
             {
-                var product = await _context.Products.Where(e => e.Id == elem.Product_Id).FirstOrDefaultAsync();
-                product.Quantity -= elem.Quantity;
+                purchaseOrder.Supplier = await _context.Suppliers.FindAsync((long)purchaseOrder.Supplier_Id);
+            }
 
+
+            var Orders = new List<Order>();
+            double Total = 0;
+
+            var Products = await _context.Products.ToListAsync();
+
+
+
+            // Changes the stock for each products of SaleOrders.products
+            purchaseOrder.Orders.ForEach(elem =>
+            {
+                elem.Product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
+                Total += elem.Product.Price * elem.Quantity;
+                Orders.Add(elem);
+
+                var product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
+                product.Quantity += elem.Quantity;
             });
+
+            purchaseOrder.Orders = Orders;
+            purchaseOrder.Total = Total;
+            purchaseOrder.DateTime = DateTime.Now;
+
+
+            _context.PurchaseOrders.Add(purchaseOrder);
 
             await _context.SaveChangesAsync();
 

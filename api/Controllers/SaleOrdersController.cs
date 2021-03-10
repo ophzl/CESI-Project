@@ -104,6 +104,7 @@ namespace api.Controllers
 
             saleOrder.Orders = Orders;
             saleOrder.Total = Total;
+            saleOrder.DateTime = DateTime.Now;
 
             _context.SaleOrders.Add(saleOrder);
 
