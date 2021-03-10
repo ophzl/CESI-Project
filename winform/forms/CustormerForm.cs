@@ -65,13 +65,13 @@ namespace winform.forms
                 HttpContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
                 var t = await Task.Run(() => SendURI(new Uri("https://localhost:5001/api/Customers"), content));
 
-                this.Visible = false;
-           
+            this.Dispose(); this.Close();
+
         }
 
         private void Annuler_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Dispose(); this.Close();
         }
     }
 }

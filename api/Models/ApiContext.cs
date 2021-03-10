@@ -13,7 +13,6 @@ namespace api.Models
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
-        public DbSet<Stock> Stocks { get; set; }
         public DbSet<WineFamily> WineFamilies { get; set; }
 
         public DbSet<SaleOrder> SaleOrders { get; set; }

@@ -42,26 +42,38 @@ namespace api.Models
                     context.Products.AddRange(
                         new Product
                         {
-                            Name = "Dragon de Quintus, 2nd vin du Château Quintus, 2016",
+                            Name = "Dragon de Quintus",
+                            House = "Chateau Quintus",
+                            Year = "2016",
+                            Quantity = 100,
                             Price = 120.00,
                             SellPrice = 179.99,
                             WineFamily_Id = 1,
                         }, new Product
                         {
-                            Name = "UBY N°4 Gros & Petit Manseng Doux, 2020",
+                            Name = "UBY N°4 Gros & Petit Manseng Doux",
+                            House = "Uby",
+                            Year = "2020",
+                            Quantity = 600,
                             Price = 4.50,
                             SellPrice = 7.90,
                             WineFamily_Id = 3,
                         }, new Product
                         {
-                            Name = "Château La Sauvageonne La Villa, 2019",
+                            Name = "La Villa",
+                            House = "Château La Sauvageonne",
+                            Year = "2019",
+                            Quantity = 300,
                             Price = 30.00,
                             SellPrice = 45.00,
                             WineFamily_Id = 2,
 
                         }, new Product
                         {
-                            Name = "Hennessy, Paradis",
+                            Name = "Paradis",
+                            House = "Hennessy",
+                            Year = "1908",
+                            Quantity = 2,
                             Price = 1200.00,
                             SellPrice = 1500.99,
                             WineFamily_Id = 5,
@@ -106,59 +118,6 @@ namespace api.Models
                     );
                 }
 
-                context.SaveChanges();
-
-                if (!context.Stocks.Any())
-                {
-                    context.Stocks.AddRange(
-                        new Stock
-                        {
-                            Product = new Product
-                            {
-                                Id = 1,
-                                Name = "Dragon de Quintus, 2nd vin du Château Quintus, 2016",
-                                Price = 120.00,
-                                SellPrice = 179.99,
-                                WineFamily_Id = 1,
-                            },
-                            Quantity = 200
-                        }, new Stock
-                        {
-                            Product = new Product
-                            {
-                                Id = 2,
-                                Name = "UBY N°4 Gros & Petit Manseng Doux, 2020",
-                                Price = 4.50,
-                                SellPrice = 7.90,
-                                WineFamily_Id = 3,
-                            },
-                            Quantity = 100
-                        }, new Stock
-                        {
-                            Product = new Product
-                            {
-                                Id = 3,
-                                Name = "Château La Sauvageonne La Villa, 2019",
-                                Price = 30.00,
-                                SellPrice = 45.00,
-                                WineFamily_Id = 2,
-
-                            },
-                            Quantity = 1400
-                        }, new Stock
-                        {
-                            Product = new Product
-                            {
-                                Id = 4,
-                                Name = "Hennessy, Paradis",
-                                Price = 1200.00,
-                                SellPrice = 1500.99,
-                                WineFamily_Id = 5,
-                            },
-                            Quantity = 10
-                        }
-                    );
-                }
 
                 context.SaveChanges();
             }

@@ -82,8 +82,8 @@ namespace api.Controllers
             // Changes the stock for each products of SaleOrders.products
             saleOrder.Products.ForEach(async elem =>
             {
-                var stock = await _context.Stocks.Where(e => e.Id == elem.Id).FirstOrDefaultAsync();
-                stock.Quantity--;
+                var product = await _context.Products.Where(e => e.Id == elem.Id).FirstOrDefaultAsync();
+                product.Quantity--;
 
             });
 
