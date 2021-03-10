@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "cgKz7H/M03C3HpKZPPFDeM5yKqF+3mslzojcoS+uPdi5pe6LyZ7F3i6Jp7j6WJTA38hFhI+Wkv280uR6F7isyg==",
+  "dgSpecHash": "f8VLn6SKz3exez+JsJd/Ca6IRqXmuQT267GWHgx7jSacz2qYuXEFIcDMk+G7B71Pa4i03i+DoVk/y1gnp66QnA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj",
+  "projectFilePath": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\web.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ophel\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\chevr\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

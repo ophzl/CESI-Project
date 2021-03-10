@@ -1,50 +1,47 @@
 ﻿@model web.Models.Product
-@{
-    ViewData["Title"] = "Create";
-}
 
-<h1>Create a product</h1>
+<link rel="icon" type="image/png" href="https://img.icons8.com/plasticine/2x/wine-glass.png" />
+<link rel="stylesheet" href="~/css/createProduct.css" />
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger" />
-            </div>
-            <div class="form-group">
-                <label asp-for="WineFamily" class="control-label"></label>
-                <select asp-for="WineFamily" class="form-select form-select-sm">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                <span asp-validation-for="WineFamily" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SellPrice" class="control-label"></label>
-                <input asp-for="SellPrice" class="form-control" />
-                <span asp-validation-for="SellPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="create-form">
+    <h1>Create a product</h1>
+        <div class="row">
+            <div>
+                <form class="container" asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger" />
+                    </div>
+                    <div class="form-group" id="wine-family">
+                        <label asp-for="WineFamily" class="control-label"></label>
+                        <select asp-for="WineFamily" class="form-select form-select-sm">
+                            <option selected>Choose your wine</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <span asp-validation-for="WineFamily" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SellPrice" class="control-label"></label>
+                        <input asp-for="SellPrice" class="form-control" />
+                        <span asp-validation-for="SellPrice" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+             </div>
+          </form>
+       </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@{
+    ViewData["Title"] = "Create";
 }
