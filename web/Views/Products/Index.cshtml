@@ -46,6 +46,9 @@ Menu
                 @Html.DisplayFor(modelItem => item.House)
             </td>
             <td>
+                <button onclick="setProductToCart(@item.Id)">Add to cart</button>
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
@@ -54,3 +57,18 @@ Menu
         }
     </tbody>
 </table>
+
+<script>
+    function setProductToCart(product_id) {
+        var str_product_id = '' + product_id
+        if (!localStorage.getItem(str_product_id)) {
+            localStorage.setItem(str_product_id, 1)
+        } else {
+            var str_quantity = localStorage.getItem(str_product_id);
+            var final_quantity = parseInt(str_quantity, 10) + 1
+            var str_final_quantity = '' + final_quantity
+            localStorage.setItem(product_id, str_final_quantity)
+            console.log(localStorage)
+        }
+    }
+</script>

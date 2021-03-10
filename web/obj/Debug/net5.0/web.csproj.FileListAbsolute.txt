@@ -130,3 +130,4 @@ D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.dll
 D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\ref\web.dll
 D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.pdb
 D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.genruntimeconfig.cache
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs

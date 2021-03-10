@@ -31,6 +31,7 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ApiContext")));
+            services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -54,6 +55,11 @@ namespace api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true));
 
             app.UseAuthorization();
 
