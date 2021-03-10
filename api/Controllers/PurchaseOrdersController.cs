@@ -78,9 +78,9 @@ namespace api.Controllers
         public async Task<ActionResult<PurchaseOrder>> PostPurchaseOrder(PurchaseOrder purchaseOrder)
         {
 
-           if (!purchaseOrder.Supplier_Id.Equals(null))
+            if (!purchaseOrder.Supplier_Id.Equals(null))
             {
-                purchaseOrder.Supplier = await _context.Suppliers.FindAsync((long) purchaseOrder.Supplier_Id);
+                purchaseOrder.Supplier = await _context.Suppliers.FindAsync((long)purchaseOrder.Supplier_Id);
             }
 
 
@@ -104,6 +104,8 @@ namespace api.Controllers
 
             purchaseOrder.Orders = Orders;
             purchaseOrder.Total = Total;
+            purchaseOrder.DateTime = DateTime.Now;
+
 
             _context.PurchaseOrders.Add(purchaseOrder);
 
