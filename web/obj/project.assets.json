@@ -52,19 +52,40 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\ophel\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+>>>>>>> 137c07eaa041376249adefa5c3ed6840b559a08c
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj",
       "projectName": "web",
       "projectPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj",
       "packagesPath": "C:\\Users\\ophel\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\cesi-project\\web\\web.csproj",
+      "projectName": "web",
+      "projectPath": "C:\\Users\\user\\source\\repos\\cesi-project\\web\\web.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\cesi-project\\web\\obj\\",
+>>>>>>> 137c07eaa041376249adefa5c3ed6840b559a08c
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\ophel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 137c07eaa041376249adefa5c3ed6840b559a08c
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -113,7 +134,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+>>>>>>> 137c07eaa041376249adefa5c3ed6840b559a08c
       }
     }
   }

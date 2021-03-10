@@ -70,6 +70,7 @@ C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.Custorme
 >>>>>>> e55b3521739f79006c5775cf7b56a3fcfba304a9
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.WineFamilyForm.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.SupplierForm.resources
+<<<<<<< HEAD
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\winform.exe.config
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\winform.exe
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\winform.pdb
@@ -106,3 +107,8 @@ C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet 
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.csproj.CopyComplete
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.exe
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.pdb
+=======
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.ProductForm.resources
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.SupplierForm.resources
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.WineFamilyForm.resources
+>>>>>>> 137c07eaa041376249adefa5c3ed6840b559a08c
