@@ -70,16 +70,11 @@ C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet 
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\web.TagHelpers.input.cache
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\web.TagHelpers.output.cache
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\web.RazorCoreGenerate.cache
-C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Customers\Create.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Home\_Layout.cshtml.g.cs
-C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Products\Create.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Suppliers\Create.cshtml.g.cs
-C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\WineFamilies\Create.cshtml.g.cs
-C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\WineFamilies\Edit.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\web.RazorTargetAssemblyInfo.cache

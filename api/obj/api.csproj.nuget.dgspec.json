@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\cesi-project\\api\\api.csproj": {}
+    "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\cesi-project\\api\\api.csproj": {
+    "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\cesi-project\\api\\api.csproj",
+        "projectUniqueName": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\user\\source\\repos\\cesi-project\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\cesi-project\\api\\obj\\",
+        "projectPath": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\chevr\\.nuget\\packages\\",
+        "outputPath": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\chevr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,17 +42,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.OpenApi": {
               "target": "Package",
@@ -85,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

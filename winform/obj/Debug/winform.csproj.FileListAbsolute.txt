@@ -70,6 +70,45 @@ C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.Custorme
 >>>>>>> e55b3521739f79006c5775cf7b56a3fcfba304a9
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.WineFamilyForm.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.SupplierForm.resources
+<<<<<<< HEAD
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\winform.exe.config
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\winform.exe
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\winform.pdb
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\MaterialSkin.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Buffers.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Memory.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Text.Json.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.ValueTuple.dll
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Buffers.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Memory.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Text.Json.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\bin\Debug\System.ValueTuple.xml
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.csprojAssemblyReference.cache
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.Wine.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.ProductForm.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.CustormerForm.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.SupplierForm.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.WineFamilyForm.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.Properties.Resources.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.csproj.GenerateResource.cache
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.csproj.CoreCompileInputs.cache
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.csproj.CopyComplete
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.exe
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.pdb
+=======
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.ProductForm.resources
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.SupplierForm.resources
 C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.WineFamilyForm.resources
+>>>>>>> 137c07eaa041376249adefa5c3ed6840b559a08c
