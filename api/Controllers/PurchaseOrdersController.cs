@@ -99,7 +99,7 @@ namespace api.Controllers
                 Orders.Add(elem);
 
                 var product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
-                product.Quantity -= elem.Quantity;
+                product.Quantity += elem.Quantity;
             });
 
             purchaseOrder.Orders = Orders;
