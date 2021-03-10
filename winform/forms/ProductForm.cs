@@ -29,7 +29,7 @@ namespace winform.forms
             
             try
             {
-                var url = "https://localhost:5001/api/winefamilies/";
+                var url = "https://localhost:5001/api/WineFamilies/";
                 var webRequest = (HttpWebRequest)WebRequest.Create(url);
                 var webResponse = (HttpWebResponse)webRequest.GetResponse();
 
@@ -40,8 +40,7 @@ namespace winform.forms
                     var arr = JsonConvert.DeserializeObject<List<WineFamily>>(s);
                     comboBox1.DataSource = arr;
                     comboBox1.DisplayMember = "Name";
-                    comboBox1.ValueMember = "id";
-
+                    comboBox1.ValueMember = "Id";
                 }
                 else
                 {
@@ -53,6 +52,7 @@ namespace winform.forms
                 Console.WriteLine(exception.Message);
             }
         }
+
         static async Task<string> SendURI(Uri u, HttpContent c)
         {
             var response = string.Empty;
