@@ -55,30 +55,5 @@ namespace web.Controllers
             return View(product);
         }
 
-        // GET: Products/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Products/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price,SellPrice,WineFamily")] Product product)
-        {
-            var values = new Dictionary<string, string>
-            {
-                {"Id", product.Id.ToString() },
-                {"Name", product.Name },
-                {"Price", product.Price.ToString() },
-                {"SellPrice", product.SellPrice.ToString() },
-                {"WineFamily", product.WineFamily.ToString() },
-            };
-            var content = new FormUrlEncodedContent(values);
-            var client = new HttpClient();
-            var res = await client.PostAsync("https://localhost:44343/api/WineFamilies", content);
-            Console.WriteLine(res);
-            return View(product);
-        }
     }
 }
