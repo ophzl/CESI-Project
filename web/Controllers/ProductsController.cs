@@ -6,16 +6,46 @@ using System.Threading.Tasks;
 using web.Models;
 using System.Net.Http;
 using Microsoft.AspNetCore.Http;
-
+using Newtonsoft.Json.Linq;
 
 namespace web.Controllers
 {
     public class ProductsController : Controller
     {
+        List<Product> products = new List<Product>();
+
+        static async Task<string> GetURI(Uri u)
+        {
+            var response = string.Empty;
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage result = await client.GetAsync(u);
+                if (result.IsSuccessStatusCode)
+                {
+                    response = await result.Content.ReadAsStringAsync();
+                }
+            }
+            return response;
+        }
 
         public IActionResult Index()
         {
             return View();
+        }
+
+        // GET: Products/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var t = Task.Run(() => GetURI(new Uri("https://localhost:5001/api/Products/" + id)));
+            t.Wait();
+            var j = JObject.Parse(t.Result);
+            Product product = new Product((int)j["id"], (string)j["name"], (double)j["price"]);
+            return View(product);
         }
 
         // GET: Products/Create
