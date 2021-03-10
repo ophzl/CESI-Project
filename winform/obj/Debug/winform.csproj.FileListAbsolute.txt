@@ -70,3 +70,6 @@ C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.Custorme
 >>>>>>> e55b3521739f79006c5775cf7b56a3fcfba304a9
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.WineFamilyForm.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.SupplierForm.resources
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.ProductForm.resources
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.SupplierForm.resources
+C:\Users\user\source\repos\cesi-project\winform\obj\Debug\winform.forms.WineFamilyForm.resources
