@@ -24,14 +24,14 @@ namespace api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PurchaseOrder>>> GetPurchaseOrder()
         {
-            return await _context.PurchaseOrder.ToListAsync();
+            return await _context.PurchaseOrders.ToListAsync();
         }
 
         // GET: api/PurchaseOrders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PurchaseOrder>> GetPurchaseOrder(long id)
         {
-            var purchaseOrder = await _context.PurchaseOrder.FindAsync(id);
+            var purchaseOrder = await _context.PurchaseOrders.FindAsync(id);
 
             if (purchaseOrder == null)
             {
@@ -77,14 +77,14 @@ namespace api.Controllers
         [HttpPost]
         public async Task<ActionResult<PurchaseOrder>> PostPurchaseOrder(PurchaseOrder purchaseOrder)
         {
-            _context.PurchaseOrder.Add(purchaseOrder);
+            _context.PurchaseOrders.Add(purchaseOrder);
 
-            purchaseOrder.Products.ForEach(async elem =>
-                        {
-                            var product = await _context.Products.Where(e => e.Id == elem.Id).FirstOrDefaultAsync();
-                            product.Quantity++;
+            purchaseOrder.Orders.ForEach(async elem =>
+            {
+                var product = await _context.Products.Where(e => e.Id == elem.Product_Id).FirstOrDefaultAsync();
+                product.Quantity -= elem.Quantity;
 
-                        });
+            });
 
             await _context.SaveChangesAsync();
 
@@ -95,13 +95,13 @@ namespace api.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePurchaseOrder(long id)
         {
-            var purchaseOrder = await _context.PurchaseOrder.FindAsync(id);
+            var purchaseOrder = await _context.PurchaseOrders.FindAsync(id);
             if (purchaseOrder == null)
             {
                 return NotFound();
             }
 
-            _context.PurchaseOrder.Remove(purchaseOrder);
+            _context.PurchaseOrders.Remove(purchaseOrder);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -109,7 +109,7 @@ namespace api.Controllers
 
         private bool PurchaseOrderExists(long id)
         {
-            return _context.PurchaseOrder.Any(e => e.Id == id);
+            return _context.PurchaseOrders.Any(e => e.Id == id);
         }
     }
 }

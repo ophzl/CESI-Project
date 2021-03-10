@@ -16,7 +16,7 @@ namespace api.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.4")
+                .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("api.Models.Customer", b =>
@@ -43,6 +43,39 @@ namespace api.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("api.Models.Order", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long?>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Product_Id")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("PurchaseOrderId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("Quantity")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("SaleOrderId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("PurchaseOrderId");
+
+                    b.HasIndex("SaleOrderId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("api.Models.Product", b =>
                 {
                     b.Property<long>("Id")
@@ -50,16 +83,22 @@ namespace api.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<long?>("DefaultSupplierId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("DefaultSupplier_Id")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("House")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<long?>("PurchaseOrderId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("SaleOrderId")
+                    b.Property<long>("Quantity")
                         .HasColumnType("bigint");
 
                     b.Property<double>("SellPrice")
@@ -71,11 +110,12 @@ namespace api.Migrations
                     b.Property<long>("WineFamily_Id")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("Year")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("PurchaseOrderId");
-
-                    b.HasIndex("SaleOrderId");
+                    b.HasIndex("DefaultSupplierId");
 
                     b.HasIndex("WineFamilyId");
 
@@ -89,8 +129,11 @@ namespace api.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("SupplierId")
                         .HasColumnType("bigint");
@@ -98,11 +141,14 @@ namespace api.Migrations
                     b.Property<long>("Supplier_Id")
                         .HasColumnType("bigint");
 
+                    b.Property<double>("Total")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
 
                     b.HasIndex("SupplierId");
 
-                    b.ToTable("PurchaseOrder");
+                    b.ToTable("PurchaseOrders");
                 });
 
             modelBuilder.Entity("api.Models.SaleOrder", b =>
@@ -118,6 +164,12 @@ namespace api.Migrations
                     b.Property<long>("Customer_Id")
                         .HasColumnType("bigint");
 
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Total")
                         .HasColumnType("float");
 
@@ -126,26 +178,6 @@ namespace api.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("SaleOrders");
-                });
-
-            modelBuilder.Entity("api.Models.Stock", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<long?>("ProductId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("Quantity")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("Stocks");
                 });
 
             modelBuilder.Entity("api.Models.Supplier", b =>
@@ -202,19 +234,34 @@ namespace api.Migrations
                     b.ToTable("WineFamilies");
                 });
 
-            modelBuilder.Entity("api.Models.Product", b =>
+            modelBuilder.Entity("api.Models.Order", b =>
                 {
+                    b.HasOne("api.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
+
                     b.HasOne("api.Models.PurchaseOrder", null)
-                        .WithMany("Products")
+                        .WithMany("Orders")
                         .HasForeignKey("PurchaseOrderId");
 
                     b.HasOne("api.Models.SaleOrder", null)
-                        .WithMany("Products")
+                        .WithMany("Orders")
                         .HasForeignKey("SaleOrderId");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("api.Models.Product", b =>
+                {
+                    b.HasOne("api.Models.Supplier", "DefaultSupplier")
+                        .WithMany()
+                        .HasForeignKey("DefaultSupplierId");
 
                     b.HasOne("api.Models.WineFamily", "WineFamily")
                         .WithMany()
                         .HasForeignKey("WineFamilyId");
+
+                    b.Navigation("DefaultSupplier");
 
                     b.Navigation("WineFamily");
                 });
@@ -237,23 +284,14 @@ namespace api.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("api.Models.Stock", b =>
-                {
-                    b.HasOne("api.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("api.Models.PurchaseOrder", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("api.Models.SaleOrder", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

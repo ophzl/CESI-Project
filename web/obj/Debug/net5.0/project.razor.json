@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\web.csproj",
+  "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\web.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15601,6 +15601,52 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "web",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Products\\Index.cshtml",
+      "TargetPath": "Views\\Products\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Products\\Details.cshtml",
+      "TargetPath": "Views\\Products\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Home\\_Layout.cshtml",
+      "TargetPath": "Views\\Home\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\source\\repos\\cesi-project\\web\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

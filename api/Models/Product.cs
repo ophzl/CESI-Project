@@ -17,6 +17,8 @@ namespace api.Models
         public WineFamily WineFamily { get; set; }
         public long WineFamily_Id { get; set; }
 
-        
+        public Supplier DefaultSupplier { get; set; }
+        public long DefaultSupplier_Id { get; set; }
+
     }
 }

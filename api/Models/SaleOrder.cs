@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace api.Models
 {
@@ -8,7 +9,12 @@ namespace api.Models
         public long Id { get; set; }
         public double Total { get; set; }
 
-        public List<Product> Products { get; set; }
+        public string Status { get; set; }
+
+        public List<Order> Orders { get; set; }
+
+        public DateTime DateTime { get; set; }
+
         public Customer Customer { get; set; }
         public long Customer_Id { get; set; }
 
