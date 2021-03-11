@@ -97,7 +97,6 @@ namespace winform.forms
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(125, 28);
             this.textBox2.TabIndex = 8;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // nom
             // 
@@ -134,7 +133,6 @@ namespace winform.forms
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 28);
             this.textBox3.TabIndex = 14;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label2
             // 
@@ -200,7 +198,6 @@ namespace winform.forms
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(125, 30);
             this.comboBox2.TabIndex = 24;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label6
             // 
