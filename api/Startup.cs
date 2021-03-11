@@ -38,7 +38,7 @@ namespace api
                 {
                     Version = "v1",
                     Title = "WineNot API",
-                    Description = "Lalalalala",
+                    Description = "WineNot API Documentation, all the routes made public.",
                 });
             });
         }

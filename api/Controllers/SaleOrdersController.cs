@@ -80,7 +80,7 @@ namespace api.Controllers
 
             if (!saleOrder.Customer_Id.Equals(null))
             {
-                saleOrder.Customer = await _context.Customers.FindAsync((long) saleOrder.Customer_Id);
+                saleOrder.Customer = await _context.Customers.FindAsync((long)saleOrder.Customer_Id);
             }
 
 
@@ -100,6 +100,23 @@ namespace api.Controllers
 
                 var product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
                 product.Quantity -= elem.Quantity;
+
+                if (product.Quantity <= 0)
+                {
+                    var autoOrder = new Order { Product = product, Product_Id = product.Id, Quantity = product.Quantity + 50 };
+                    var autoList = new List<Order>();
+                    autoList.Add(autoOrder);
+                    var PurchaseOrder = new PurchaseOrder
+                    {
+                        DateTime = DateTime.Now,
+                        Orders = autoList,
+                        Supplier = product.DefaultSupplier,
+                        Supplier_Id = product.DefaultSupplier_Id
+
+                    };
+                    _context.PurchaseOrders.Add(PurchaseOrder);
+                }
+
             });
 
             saleOrder.Orders = Orders;
@@ -111,7 +128,10 @@ namespace api.Controllers
 
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSaleOrder", new { id = saleOrder.Id }, saleOrder);
+            return CreatedAtAction("GetSaleOrder", new
+            {
+                id = saleOrder.Id
+            }, saleOrder);
         }
 
         // DELETE: api/SaleOrders/5
