@@ -24,7 +24,28 @@ namespace api.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            return await _context.Products.ToListAsync();
+            List<Product> products = await _context.Products.ToListAsync();
+            List<Product> resultProducts = new List<Product>();
+
+
+            List<WineFamily> wineFamilies = await _context.WineFamilies.ToListAsync();
+            List<Supplier> suppliers = await _context.Suppliers.ToListAsync();
+
+            products.ForEach(product =>
+            {
+                if (!product.WineFamily_Id.Equals(null))
+                {
+                    product.WineFamily = wineFamilies.Find(w => w.Id == product.WineFamily_Id);
+                }
+
+                if (!product.DefaultSupplier_Id.Equals(null))
+                {
+                    product.DefaultSupplier = suppliers.Find(s => s.Id == product.DefaultSupplier_Id);
+                }
+                resultProducts.Add(product);
+            });
+
+            return resultProducts;
         }
 
         // GET: api/Products/5
@@ -32,6 +53,18 @@ namespace api.Controllers
         public async Task<ActionResult<Product>> GetProduct(long id)
         {
             var product = await _context.Products.FindAsync(id);
+
+            if (!product.WineFamily_Id.Equals(null))
+            {
+                List<WineFamily> wineFamilies = await _context.WineFamilies.ToListAsync();
+                product.WineFamily = wineFamilies.Find(w => w.Id == product.WineFamily_Id);
+            }
+
+            if (!product.DefaultSupplier_Id.Equals(null))
+            {
+                List<Supplier> suppliers = await _context.Suppliers.ToListAsync();
+                product.DefaultSupplier = suppliers.Find(s => s.Id == product.DefaultSupplier_Id);
+            }
 
             if (product == null)
             {
@@ -84,11 +117,11 @@ namespace api.Controllers
                 product.WineFamily = _context.WineFamilies.Find((long)product.WineFamily_Id);
             }
 
-             if (!product.Quantity.Equals(null))
+            if (!product.Quantity.Equals(null))
             {
                 product.Quantity = 0;
             }
-            
+
             await _context.SaveChangesAsync();
 
 
