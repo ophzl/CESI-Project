@@ -99,11 +99,6 @@ namespace winform.forms
             return response;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private async void Envoyer_Click(object sender, EventArgs e)
         {
             var product = new Product();

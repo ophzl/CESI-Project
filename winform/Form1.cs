@@ -27,15 +27,20 @@ namespace winform
             this.formCustomer = new CustormerForm();
             this.formWineFamily = new WineFamilyForm();
             this.formSupplier = new SupplierForm();
+            this.formPurchaseOrder = new PurchaseOrderForm();
+
             this.formProduct.Visible = false;
             this.formCustomer.Visible = false;
             this.formWineFamily.Visible = false;
             this.formSupplier.Visible = false;
+            this.formSupplier.Visible = false;
+            this.formPurchaseOrder.Visible = false;
         }
         CustormerForm formCustomer;
         ProductForm formProduct;
         WineFamilyForm formWineFamily;
         SupplierForm formSupplier;
+        PurchaseOrderForm formPurchaseOrder;
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
@@ -208,7 +213,7 @@ namespace winform
 
         private void materialFlatButton9_Click(object sender, EventArgs e)
         {
-
+            this.formPurchaseOrder.Visible = true;
         }
     }
 }
