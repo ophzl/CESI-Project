@@ -235,5 +235,45 @@ namespace winform
                 dataGridView2.Rows.RemoveAt(row.Index);
             }
         }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in this.dataGridView4.SelectedRows)
+            {
+                Supplier sup = row.DataBoundItem as Supplier;
+                if (sup != null)
+                {
+                    new SupplierFormEdit(sup).Visible = true;
+                }
+            }
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView4.SelectedRows)
+            {
+                dataGridView4.Rows.RemoveAt(row.Index);
+            }
+        }
+
+        private void materialFlatButton16_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in this.dataGridView3.SelectedRows)
+            {
+                WineFamily family = row.DataBoundItem as WineFamily;
+                if (family != null)
+                {
+                    new WineFamilyFormEdit(family).Visible = true;
+                }
+            }
+        }
+
+        private void materialFlatButton15_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView3.SelectedRows)
+            {
+                dataGridView3.Rows.RemoveAt(row.Index);
+            }
+        }
     }
 }
