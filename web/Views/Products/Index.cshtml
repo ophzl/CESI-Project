@@ -16,6 +16,9 @@
         <select name="year" asp-for="ProductYear" asp-items="Model.Years">
             <option value="">Toutes</option>
         </select>
+        <select name="family" asp-for="ProductFamily" asp-items="Model.Families">
+            <option value="">Toutes</option>
+        </select>
         <input type="submit" value="Filtrer" />
     </p>
 </form>
