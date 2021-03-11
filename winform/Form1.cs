@@ -215,5 +215,25 @@ namespace winform
         {
             this.formPurchaseOrder.Visible = true;
         }
+
+        private void materialFlatButton12_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in this.dataGridView2.SelectedRows)
+            {
+                Customer cust = row.DataBoundItem as Customer;
+                if (cust != null)
+                {
+                   new CustormerFormEdit(cust).Visible = true;
+                }
+            }
+        }
+
+        private void materialFlatButton11_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+            {
+                dataGridView2.Rows.RemoveAt(row.Index);
+            }
+        }
     }
 }
