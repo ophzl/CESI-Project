@@ -1,101 +1,95 @@
-﻿@{
-    ViewData["Title"] = "Panier";
-}
+﻿<style>
+	.container {
+		max-width: initial;
+		padding: 0;
+		margin: 0;
+	}
+</style>
 
-<link rel="stylesheet" href="~/css/home.css" />
+<div class="m-0 p-0">
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top mb-5" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">WineNot</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wines">Wines</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+	<div class="flex flex-col md:grid grid-cols-5 h-screen w-screen">
+		<div class="col-span-3 bg-red-900 p-24">
+			<div class="grid grid-cols-3 gap-8">
+				<div class="bg-gray-200 p-5 h-72 rounded-lg"></div>
+				<div class="bg-gray-200 p-5 h-72 rounded-lg"></div>
+				<div class="bg-gray-200 p-5 h-72 rounded-lg"></div>
+				<div class="bg-gray-200 p-5 h-72 rounded-lg"></div>
+				<div class="bg-gray-200 p-5 h-72 rounded-lg"></div>
+			</div>
+		</div>
 
-<h1>Panier</h1>
+		<div class="bg-gray-100 col-span-2 flex flex-col justify-between">
+			<div class="flex flex-row justify-center p-5">
+				<p>Panier</p>
+			</div>
+			<div class="flex flex-col" id="cart">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Maison</th>
-            <th>Prix unitaire</th>
-            <th>Quantité</th>
-            <th>Prix total</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody id="cart">
-    </tbody>
-</table>
+			</div>
 
-<div id="total_price">
-    <p>Total :</p>
-    <p id="total_price"></p>
+			<div class="flex flex-col">
+				<p class="tracking-wide font-semibold text-gray-700 px-10 my-4">Total : <span id="total_price"
+						class="font-extrabold"></span></p>
+				<button class="bg-red-900 px-5 py-3 text-white font-bold m-5">Payer</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <button onclick="createSaleOrder()">Commander</button>
 
 
-        <script>
-            var keys = Object.keys(localStorage)
+<script>
+	var keys = Object.keys(localStorage)
 
-            const cart_html = document.getElementById("cart")
-            const total_html = document.getElementById("total_price")
+	const cart_html = document.getElementById("cart")
+	const total_html = document.getElementById("total_price")
 
-            var total = 0
-            var products = {"orders": []}
+	var total = 0
+	var products = { "orders": [] }
 
-            keys.forEach(async el => {
-                $.ajax({
-                    url: "https://localhost:5001/api/Products/" + el,
-                    type: "GET",
-                    crossDomain: true,
-                    success: function (result) {
-                        var quantity = localStorage.getItem(el)
-                        var price_subtotal = result.sellPrice * quantity
-                        total += price_subtotal
-                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.sellPrice}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
-                        total_html.innerHTML = `<p>${total}</p>`
-                        products["orders"].push({ "product_Id": result.id, "quantity": parseInt(quantity) })
-                    },
-                    error: function (error) {
-                        console.log(error);
-                    }
-                });
-            })
+	keys.forEach(async el => {
+		$.ajax({
+			url: "https://localhost:5001/api/Products/" + el,
+			type: "GET",
+			crossDomain: true,
+			success: function (result) {
+				var quantity = localStorage.getItem(el)
+				var price_subtotal = result.sellPrice * quantity
+				total += price_subtotal
+				cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.sellPrice}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
+				total_html.innerHTML = `<p>${total}</p>`
+				products["orders"].push({ "product_Id": result.id, "quantity": parseInt(quantity) })
+			},
+			error: function (error) {
+				console.log(error);
+			}
+		});
+	})
 
-            function removeProduct(product_id) {
-                console.log("Product with id " + product_id + " removed.");
-                localStorage.removeItem(product_id);
-                location.reload();
-            }
+	function removeProduct(product_id) {
+		console.log("Product with id " + product_id + " removed.");
+		localStorage.removeItem(product_id);
+		location.reload();
+	}
 
-            function createSaleOrder() {
-                $.ajax({
-                    url: "https://localhost:5001/api/SaleOrders",
-                    type: "POST",
-                    crossDomain: true,
-                    data: JSON.stringify(products),
-                    dataType: "json",
-                    contentType: "application/json",
-                    success: function (result) {
-                        console.log("Sale order created.")
-                    },
-                    error: function (error) {
-                        console.log(error);
-                    }
-                });
-                localStorage.clear();
-                window.location.replace("https://localhost:5002");
-            }
+	function createSaleOrder() {
+		$.ajax({
+			url: "https://localhost:5001/api/SaleOrders",
+			type: "POST",
+			crossDomain: true,
+			data: JSON.stringify(products),
+			dataType: "json",
+			contentType: "application/json",
+			success: function (result) {
+				console.log("Sale order created.")
+			},
+			error: function (error) {
+				console.log(error);
+			}
+		});
+		localStorage.clear();
+		window.location.replace("https://localhost:5002");
+	}
 
-        </script>
+</script>
