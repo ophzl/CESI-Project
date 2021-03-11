@@ -24,29 +24,50 @@
 
 <h1>Panier</h1>
 
-<div id="cart"></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Maison</th>
+            <th>Prix unitaire</th>
+            <th>Quantité</th>
+            <th>Prix total</th>
+        </tr>
+    </thead>
+    <tbody id="cart">
+    </tbody>
+</table>
+
+<div id="total_price">
+    <p>Total :</p>
+    <p id="total_price"></p>
+</div>
 
 
-<script>
-    var values = [],
-        keys = Object.keys(localStorage),
-        i = keys.length;
+        <script>
+            var keys = Object.keys(localStorage)
 
-    const root = document.getElementById("cart")
+            const cart_html = document.getElementById("cart")
+            const total_html = document.getElementById("total_price")
 
-    keys.forEach(async el => {
-        $.ajax({
-            url: "https://localhost:5001/api/Products/" + el,
-            type: "GET",
-            crossDomain: true,
-            success: function (result) {
-                console.log(result);
-            },
-            error: function (error) {
-                console.log(error);
-            }
-        });
-    })
+            var total = 0
 
+            keys.forEach(async el => {
+                $.ajax({
+                    url: "https://localhost:5001/api/Products/" + el,
+                    type: "GET",
+                    crossDomain: true,
+                    success: function (result) {
+                        var quantity = localStorage.getItem(el)
+                        var price_subtotal = result.price * quantity
+                        total += price_subtotal
+                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.price}</td><td>${quantity}</td><td>${price_subtotal}</td></tr>`
+                        total_html.innerHTML = `<p>${total}</p>`
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            })
 
-</script>
+        </script>
