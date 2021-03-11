@@ -40,7 +40,12 @@ namespace api.Models
                 if (!context.WineFamilies.Any())
                 {
                     context.WineFamilies.AddRange(Families);
+                } else {
+                    Families = context.WineFamilies.ToList();
                 }
+
+                context.SaveChanges();
+
                 var Suppliers = new List<Supplier>() {new Supplier
                         {
                             Name = "Lavinia",
@@ -55,12 +60,15 @@ namespace api.Models
                 if (!context.Suppliers.Any())
                 {
                     context.Suppliers.AddRange(Suppliers);
+                } else {
+                    Suppliers = context.Suppliers.ToList();
                 }
 
 
                 context.SaveChanges();
 
-                context.SaveChanges();
+
+
                 var Products = new List<Product>() { new Product
                         {
                             Name = "Dragon de Quintus",

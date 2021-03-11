@@ -92,30 +92,43 @@ namespace api.Controllers
 
 
             // Changes the stock for each products of SaleOrders.products
-            saleOrder.Orders.ForEach(elem =>
+            saleOrder.Orders.ForEach(async elem =>
             {
                 elem.Product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
                 Total += elem.Product.SellPrice * elem.Quantity;
-                Orders.Add(elem);
 
                 var product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
                 product.Quantity -= elem.Quantity;
 
                 if (product.Quantity <= 0)
                 {
-                    var autoOrder = new Order { Product = product, Product_Id = product.Id, Quantity = product.Quantity + 50 };
-                    var autoList = new List<Order>();
-                    autoList.Add(autoOrder);
-                    var PurchaseOrder = new PurchaseOrder
+                    var Suppliers = await _context.Suppliers.ToListAsync();
+
+                    var autoList = new List<Order>() { new Order { Product = product, Product_Id = product.Id, Quantity = (0 - product.Quantity) + 50 } };
+                    var autoPurchaseOrder = new PurchaseOrder
                     {
                         DateTime = DateTime.Now,
                         Orders = autoList,
-                        Supplier = product.DefaultSupplier,
+                        Supplier = Suppliers.Find(s => s.Id == product.DefaultSupplier_Id),
                         Supplier_Id = product.DefaultSupplier_Id
 
                     };
-                    _context.PurchaseOrders.Add(PurchaseOrder);
+
+                    // Purchase logic
+                    double autoTotal = autoList[0].Product.Price * autoList[0].Quantity;
+                    product.Quantity += autoList[0].Quantity;
+
+                    autoList[0].Product = product;
+                    autoPurchaseOrder.Orders = autoList;
+
+                    autoPurchaseOrder.Total = autoTotal;
+                    autoPurchaseOrder.DateTime = DateTime.Now;
+                    autoPurchaseOrder.Status = "LIVRE";
+
+
+                    _context.PurchaseOrders.Add(autoPurchaseOrder);
                 }
+                Orders.Add(elem);
 
             });
 
