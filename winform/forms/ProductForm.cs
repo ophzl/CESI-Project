@@ -114,6 +114,7 @@ namespace winform.forms
             var sellPrice = this.textBox5.Text;
 
             product.Name = name;
+            product.House = house;
             if (this.comboBox1.SelectedValue != null) {
                 product.WineFamily_Id = Convert.ToInt64(this.comboBox1.SelectedValue);
             }
@@ -132,6 +133,10 @@ namespace winform.forms
             {
 
                 product.Year = year;
+            }
+            else
+            {
+                return;
             }
             if (double.TryParse(price, out var parsedPrice))
             {
