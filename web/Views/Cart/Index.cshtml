@@ -60,7 +60,7 @@
                         var quantity = localStorage.getItem(el)
                         var price_subtotal = result.price * quantity
                         total += price_subtotal
-                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.price}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id}")>X</button></tr>`
+                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.price}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
                         total_html.innerHTML = `<p>${total}</p>`
                     },
                     error: function (error) {
@@ -70,14 +70,16 @@
             })
 
             function removeProduct(product_id) {
-                localStorage.removeItem(product_id)
+                console.log("Product with id " + product_id + " removed.");
+                localStorage.removeItem(product_id);
+                location.reload();
             }
 
             function changeQuantity(product_id) {
                 var str_product_id = '' + product_id
                 var quantity = localStorage.getItem(str_product_id)
                 var final_quantity = parseInt(quantity, 10) - 1
-                localStorage.setItem(product_id,)
+                localStorage.setItem(product_id, 0)
             }
 
         </script>
