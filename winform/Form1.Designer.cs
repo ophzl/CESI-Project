@@ -35,14 +35,20 @@ namespace winform
             this.wines = new System.Windows.Forms.TabPage();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.clients = new System.Windows.Forms.TabPage();
+            this.materialFlatButton12 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton11 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton4 = new MaterialSkin.Controls.MaterialFlatButton();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.Wine_Family = new System.Windows.Forms.TabPage();
+            this.materialFlatButton16 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton15 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.materialFlatButton6 = new MaterialSkin.Controls.MaterialFlatButton();
             this.suppliers = new System.Windows.Forms.TabPage();
+            this.materialFlatButton14 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton13 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton7 = new MaterialSkin.Controls.MaterialFlatButton();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.materialFlatButton8 = new MaterialSkin.Controls.MaterialFlatButton();
@@ -51,12 +57,8 @@ namespace winform
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.materialFlatButton10 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.materialFlatButton11 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton12 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton13 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton14 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton15 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton16 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton17 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton18 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.materialTabControl1.SuspendLayout();
             this.wines.SuspendLayout();
@@ -115,6 +117,8 @@ namespace winform
             // 
             // wines
             // 
+            this.wines.Controls.Add(this.materialFlatButton18);
+            this.wines.Controls.Add(this.materialFlatButton17);
             this.wines.Controls.Add(this.materialFlatButton2);
             this.wines.Controls.Add(this.dataGridView1);
             this.wines.Controls.Add(this.materialFlatButton1);
@@ -134,7 +138,7 @@ namespace winform
             this.materialFlatButton2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.materialFlatButton2.Depth = 0;
             this.materialFlatButton2.Icon = null;
-            this.materialFlatButton2.Location = new System.Drawing.Point(1005, 501);
+            this.materialFlatButton2.Location = new System.Drawing.Point(718, 501);
             this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
@@ -160,6 +164,42 @@ namespace winform
             this.clients.TabIndex = 1;
             this.clients.Text = "Clients";
             this.clients.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton12
+            // 
+            this.materialFlatButton12.AutoSize = true;
+            this.materialFlatButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton12.Depth = 0;
+            this.materialFlatButton12.Icon = null;
+            this.materialFlatButton12.Location = new System.Drawing.Point(803, 494);
+            this.materialFlatButton12.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton12.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton12.Name = "materialFlatButton12";
+            this.materialFlatButton12.Primary = false;
+            this.materialFlatButton12.Size = new System.Drawing.Size(151, 36);
+            this.materialFlatButton12.TabIndex = 7;
+            this.materialFlatButton12.Text = "Mettre à jour";
+            this.materialFlatButton12.UseVisualStyleBackColor = false;
+            this.materialFlatButton12.Click += new System.EventHandler(this.materialFlatButton12_Click);
+            // 
+            // materialFlatButton11
+            // 
+            this.materialFlatButton11.AutoSize = true;
+            this.materialFlatButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton11.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.materialFlatButton11.Depth = 0;
+            this.materialFlatButton11.Icon = null;
+            this.materialFlatButton11.Location = new System.Drawing.Point(962, 494);
+            this.materialFlatButton11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton11.Name = "materialFlatButton11";
+            this.materialFlatButton11.Primary = false;
+            this.materialFlatButton11.Size = new System.Drawing.Size(117, 36);
+            this.materialFlatButton11.TabIndex = 6;
+            this.materialFlatButton11.Text = "Supprimer";
+            this.materialFlatButton11.UseVisualStyleBackColor = false;
+            this.materialFlatButton11.Click += new System.EventHandler(this.materialFlatButton11_Click);
             // 
             // materialFlatButton4
             // 
@@ -223,6 +263,40 @@ namespace winform
             this.Wine_Family.Text = "Familles de vin";
             this.Wine_Family.UseVisualStyleBackColor = true;
             // 
+            // materialFlatButton16
+            // 
+            this.materialFlatButton16.AutoSize = true;
+            this.materialFlatButton16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton16.Depth = 0;
+            this.materialFlatButton16.Icon = null;
+            this.materialFlatButton16.Location = new System.Drawing.Point(803, 494);
+            this.materialFlatButton16.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton16.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton16.Name = "materialFlatButton16";
+            this.materialFlatButton16.Primary = false;
+            this.materialFlatButton16.Size = new System.Drawing.Size(151, 36);
+            this.materialFlatButton16.TabIndex = 10;
+            this.materialFlatButton16.Text = "Mettre à jour ";
+            this.materialFlatButton16.UseVisualStyleBackColor = true;
+            this.materialFlatButton16.Click += new System.EventHandler(this.materialFlatButton16_Click);
+            // 
+            // materialFlatButton15
+            // 
+            this.materialFlatButton15.AutoSize = true;
+            this.materialFlatButton15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton15.Depth = 0;
+            this.materialFlatButton15.Icon = null;
+            this.materialFlatButton15.Location = new System.Drawing.Point(962, 494);
+            this.materialFlatButton15.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton15.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton15.Name = "materialFlatButton15";
+            this.materialFlatButton15.Primary = false;
+            this.materialFlatButton15.Size = new System.Drawing.Size(117, 36);
+            this.materialFlatButton15.TabIndex = 9;
+            this.materialFlatButton15.Text = "Supprimer";
+            this.materialFlatButton15.UseVisualStyleBackColor = true;
+            this.materialFlatButton15.Click += new System.EventHandler(this.materialFlatButton15_Click);
+            // 
             // materialFlatButton5
             // 
             this.materialFlatButton5.AutoSize = true;
@@ -283,6 +357,40 @@ namespace winform
             this.suppliers.TabIndex = 3;
             this.suppliers.Text = "Fournisseurs";
             this.suppliers.UseVisualStyleBackColor = true;
+            // 
+            // materialFlatButton14
+            // 
+            this.materialFlatButton14.AutoSize = true;
+            this.materialFlatButton14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton14.Depth = 0;
+            this.materialFlatButton14.Icon = null;
+            this.materialFlatButton14.Location = new System.Drawing.Point(804, 494);
+            this.materialFlatButton14.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton14.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton14.Name = "materialFlatButton14";
+            this.materialFlatButton14.Primary = false;
+            this.materialFlatButton14.Size = new System.Drawing.Size(151, 36);
+            this.materialFlatButton14.TabIndex = 15;
+            this.materialFlatButton14.Text = "Mettre à jour";
+            this.materialFlatButton14.UseVisualStyleBackColor = true;
+            this.materialFlatButton14.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            // 
+            // materialFlatButton13
+            // 
+            this.materialFlatButton13.AutoSize = true;
+            this.materialFlatButton13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton13.Depth = 0;
+            this.materialFlatButton13.Icon = null;
+            this.materialFlatButton13.Location = new System.Drawing.Point(962, 494);
+            this.materialFlatButton13.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton13.Name = "materialFlatButton13";
+            this.materialFlatButton13.Primary = false;
+            this.materialFlatButton13.Size = new System.Drawing.Size(117, 36);
+            this.materialFlatButton13.TabIndex = 14;
+            this.materialFlatButton13.Text = "Supprimer";
+            this.materialFlatButton13.UseVisualStyleBackColor = true;
+            this.materialFlatButton13.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // materialFlatButton7
             // 
@@ -402,109 +510,39 @@ namespace winform
             this.materialTabSelector1.TabIndex = 4;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // materialFlatButton11
+            // materialFlatButton17
             // 
-            this.materialFlatButton11.AutoSize = true;
-            this.materialFlatButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton11.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.materialFlatButton11.Depth = 0;
-            this.materialFlatButton11.Icon = null;
-            this.materialFlatButton11.Location = new System.Drawing.Point(962, 494);
-            this.materialFlatButton11.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton11.Name = "materialFlatButton11";
-            this.materialFlatButton11.Primary = false;
-            this.materialFlatButton11.Size = new System.Drawing.Size(117, 36);
-            this.materialFlatButton11.TabIndex = 6;
-            this.materialFlatButton11.Text = "Supprimer";
-            this.materialFlatButton11.UseVisualStyleBackColor = false;
-            this.materialFlatButton11.Click += new System.EventHandler(this.materialFlatButton11_Click);
+            this.materialFlatButton17.AutoSize = true;
+            this.materialFlatButton17.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton17.Depth = 0;
+            this.materialFlatButton17.Icon = null;
+            this.materialFlatButton17.Location = new System.Drawing.Point(800, 501);
+            this.materialFlatButton17.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton17.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton17.Name = "materialFlatButton17";
+            this.materialFlatButton17.Primary = false;
+            this.materialFlatButton17.Size = new System.Drawing.Size(151, 36);
+            this.materialFlatButton17.TabIndex = 5;
+            this.materialFlatButton17.Text = "Mettre à jour";
+            this.materialFlatButton17.UseVisualStyleBackColor = true;
+            this.materialFlatButton17.Click += new System.EventHandler(this.materialFlatButton17_Click);
             // 
-            // materialFlatButton12
+            // materialFlatButton18
             // 
-            this.materialFlatButton12.AutoSize = true;
-            this.materialFlatButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton12.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.materialFlatButton12.Depth = 0;
-            this.materialFlatButton12.Icon = null;
-            this.materialFlatButton12.Location = new System.Drawing.Point(803, 494);
-            this.materialFlatButton12.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton12.Name = "materialFlatButton12";
-            this.materialFlatButton12.Primary = false;
-            this.materialFlatButton12.Size = new System.Drawing.Size(151, 36);
-            this.materialFlatButton12.TabIndex = 7;
-            this.materialFlatButton12.Text = "Mettre à jour";
-            this.materialFlatButton12.UseVisualStyleBackColor = false;
-            this.materialFlatButton12.Click += new System.EventHandler(this.materialFlatButton12_Click);
-            // 
-            // materialFlatButton13
-            // 
-            this.materialFlatButton13.AutoSize = true;
-            this.materialFlatButton13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton13.Depth = 0;
-            this.materialFlatButton13.Icon = null;
-            this.materialFlatButton13.Location = new System.Drawing.Point(962, 494);
-            this.materialFlatButton13.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton13.Name = "materialFlatButton13";
-            this.materialFlatButton13.Primary = false;
-            this.materialFlatButton13.Size = new System.Drawing.Size(117, 36);
-            this.materialFlatButton13.TabIndex = 14;
-            this.materialFlatButton13.Text = "Supprimer";
-            this.materialFlatButton13.UseVisualStyleBackColor = true;
-            this.materialFlatButton13.Click += new System.EventHandler(this.materialRaisedButton1_Click);
-            // 
-            // materialFlatButton14
-            // 
-            this.materialFlatButton14.AutoSize = true;
-            this.materialFlatButton14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton14.Depth = 0;
-            this.materialFlatButton14.Icon = null;
-            this.materialFlatButton14.Location = new System.Drawing.Point(804, 494);
-            this.materialFlatButton14.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton14.Name = "materialFlatButton14";
-            this.materialFlatButton14.Primary = false;
-            this.materialFlatButton14.Size = new System.Drawing.Size(151, 36);
-            this.materialFlatButton14.TabIndex = 15;
-            this.materialFlatButton14.Text = "Mettre à jour";
-            this.materialFlatButton14.UseVisualStyleBackColor = true;
-            this.materialFlatButton14.Click += new System.EventHandler(this.materialRaisedButton2_Click);
-            // 
-            // materialFlatButton15
-            // 
-            this.materialFlatButton15.AutoSize = true;
-            this.materialFlatButton15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton15.Depth = 0;
-            this.materialFlatButton15.Icon = null;
-            this.materialFlatButton15.Location = new System.Drawing.Point(962, 494);
-            this.materialFlatButton15.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton15.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton15.Name = "materialFlatButton15";
-            this.materialFlatButton15.Primary = false;
-            this.materialFlatButton15.Size = new System.Drawing.Size(117, 36);
-            this.materialFlatButton15.TabIndex = 9;
-            this.materialFlatButton15.Text = "Supprimer";
-            this.materialFlatButton15.UseVisualStyleBackColor = true;
-            this.materialFlatButton15.Click += new System.EventHandler(this.materialFlatButton15_Click);
-            // 
-            // materialFlatButton16
-            // 
-            this.materialFlatButton16.AutoSize = true;
-            this.materialFlatButton16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton16.Depth = 0;
-            this.materialFlatButton16.Icon = null;
-            this.materialFlatButton16.Location = new System.Drawing.Point(803, 494);
-            this.materialFlatButton16.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton16.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton16.Name = "materialFlatButton16";
-            this.materialFlatButton16.Primary = false;
-            this.materialFlatButton16.Size = new System.Drawing.Size(151, 36);
-            this.materialFlatButton16.TabIndex = 10;
-            this.materialFlatButton16.Text = "Mettre à jour ";
-            this.materialFlatButton16.UseVisualStyleBackColor = true;
-            this.materialFlatButton16.Click += new System.EventHandler(this.materialFlatButton16_Click);
+            this.materialFlatButton18.AutoSize = true;
+            this.materialFlatButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton18.Depth = 0;
+            this.materialFlatButton18.Icon = null;
+            this.materialFlatButton18.Location = new System.Drawing.Point(959, 501);
+            this.materialFlatButton18.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton18.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton18.Name = "materialFlatButton18";
+            this.materialFlatButton18.Primary = false;
+            this.materialFlatButton18.Size = new System.Drawing.Size(117, 36);
+            this.materialFlatButton18.TabIndex = 6;
+            this.materialFlatButton18.Text = "Supprimer";
+            this.materialFlatButton18.UseVisualStyleBackColor = true;
+            this.materialFlatButton18.Click += new System.EventHandler(this.materialFlatButton18_Click);
             // 
             // Wine
             // 
@@ -565,6 +603,8 @@ namespace winform
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton13;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton15;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton16;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton18;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton17;
     }
 }
 

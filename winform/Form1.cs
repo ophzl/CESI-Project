@@ -275,5 +275,26 @@ namespace winform
                 dataGridView3.Rows.RemoveAt(row.Index);
             }
         }
+
+        private void materialFlatButton17_Click(object sender, EventArgs e)
+        {
+            
+            foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
+            {
+                Product product = row.DataBoundItem as Product;
+                if (product != null)
+                {
+                    new ProductFormEdit(product).Visible = true;
+                }
+            }
+        }
+
+        private void materialFlatButton18_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                dataGridView1.Rows.RemoveAt(row.Index);
+            }
+        }
     }
 }

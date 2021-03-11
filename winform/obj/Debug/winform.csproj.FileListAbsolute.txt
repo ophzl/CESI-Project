@@ -151,3 +151,4 @@ C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet 
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.CustormerFormEdit.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.SupplierFormEdit.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.WineFamilyFormEdit.resources
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.ProductFormEdit.resources
