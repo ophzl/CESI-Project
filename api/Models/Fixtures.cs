@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using api.Models;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace api.Models
 {
@@ -14,33 +15,61 @@ namespace api.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<ApiContext>>()))
             {
+                var Families = new List<WineFamily>(){
+                        new WineFamily
+                        {
+                            Name = "Rouge"
+                        }, new WineFamily
+                        {
+                            Name = "Rosé"
+                        }, new WineFamily
+                        {
+                            Name = "Blanc"
+                        }, new WineFamily
+                        {
+                            Name = "Pétillant"
+                        }, new WineFamily
+                        {
+                            Name = "Digestif"
+                        }
+                    };
+
+
+
+
                 if (!context.WineFamilies.Any())
                 {
-
-                    context.WineFamilies.AddRange(
-                    new WineFamily
-                    {
-                        Name = "Rouge"
-                    }, new WineFamily
-                    {
-                        Name = "Rosé"
-                    }, new WineFamily
-                    {
-                        Name = "Blanc"
-                    }, new WineFamily
-                    {
-                        Name = "Pétillant"
-                    }, new WineFamily
-                    {
-                        Name = "Digestif"
-                    }
-                );
+                    context.WineFamilies.AddRange(Families);
+                } else {
+                    Families = context.WineFamilies.ToList();
                 }
 
-                if (!context.Products.Any())
+                context.SaveChanges();
+
+                var Suppliers = new List<Supplier>() {new Supplier
+                        {
+                            Name = "Lavinia",
+                            Address = "3-5 Boulevard de la Madeleine, 75001 Paris"
+                        }, new Supplier
+                        {
+                            Name = "Nicolas Rouen Carrel",
+                            Address = "40 rue Armand Carrel, Rouen 76000"
+                        }};
+
+
+                if (!context.Suppliers.Any())
                 {
-                    context.Products.AddRange(
-                        new Product
+                    context.Suppliers.AddRange(Suppliers);
+                } else {
+                    Suppliers = context.Suppliers.ToList();
+                }
+
+
+                context.SaveChanges();
+
+
+
+                var Products = new List<Product>() { new Product
                         {
                             Name = "Dragon de Quintus",
                             House = "Chateau Quintus",
@@ -48,7 +77,8 @@ namespace api.Models
                             Quantity = 100,
                             Price = 120.00,
                             SellPrice = 179.99,
-                            WineFamily_Id = 1,
+                            WineFamily_Id = Families.Find(f => f.Name == "Rouge").Id,
+                            DefaultSupplier_Id = Suppliers.Find(s => s.Id == 1).Id,
                         }, new Product
                         {
                             Name = "UBY N°4 Gros & Petit Manseng Doux",
@@ -57,7 +87,8 @@ namespace api.Models
                             Quantity = 600,
                             Price = 4.50,
                             SellPrice = 7.90,
-                            WineFamily_Id = 3,
+                            WineFamily_Id = Families.Find(f => f.Name == "Blanc").Id,
+                            DefaultSupplier_Id = Suppliers.Find(s => s.Id == 2).Id,
                         }, new Product
                         {
                             Name = "La Villa",
@@ -66,8 +97,8 @@ namespace api.Models
                             Quantity = 300,
                             Price = 30.00,
                             SellPrice = 45.00,
-                            WineFamily_Id = 2,
-
+                            WineFamily_Id = Families.Find(f => f.Name == "Blanc").Id,
+                            DefaultSupplier_Id = Suppliers.Find(s => s.Id == 1).Id,
                         }, new Product
                         {
                             Name = "Paradis",
@@ -76,15 +107,18 @@ namespace api.Models
                             Quantity = 2,
                             Price = 1200.00,
                             SellPrice = 1500.99,
-                            WineFamily_Id = 5,
-                        }
-                    );
-                }
+                            WineFamily_Id = Families.Find(f => f.Name == "Digestif").Id,
+                            DefaultSupplier_Id = Suppliers.Find(s => s.Id == 2).Id,
+                        }};
 
-                if (!context.Customers.Any())
+
+                if (!context.Products.Any())
                 {
-                    context.Customers.AddRange(
-                        new Customer
+                    context.Products.AddRange(Products);
+                }
+                context.SaveChanges();
+
+                var Customers = new List<Customer>() {new Customer
                         {
                             Name = "Didier Rossigni",
                             Address = "3 rue des Potiers, Dijon",
@@ -99,27 +133,27 @@ namespace api.Models
                             Name = "Kevin Doublet",
                             Address = "7 avenue des Laitues, Arcachon",
                             Email = "xx_killer_bg_xx@gmail.com"
-                        }
-                    );
-                }
+                        }, new Customer
+                        {
+                            Name = "Thomas Bangalter",
+                            Address = "909 Rue de la revolution",
+                            Email = "silverhead@dp.com"
+                        }, new Customer
+                        {
+                            Name = "Guy-Manuel del Homem-Christo",
+                            Address = "909 Rue de la revolution",
+                            Email = "goldenhead@dp.com"
+                        }};
 
-                if (!context.Suppliers.Any())
+
+                if (!context.Customers.Any())
                 {
-                    context.Suppliers.AddRange(
-                        new Supplier
-                        {
-                            Name = "Lavinia",
-                            Address = "3-5 Boulevard de la Madeleine, 75001 Paris"
-                        }, new Supplier
-                        {
-                            Name = "Nicolas Rouen Carrel",
-                            Address = "40 rue Armand Carrel, Rouen 76000"
-                        }
-                    );
+                    context.Customers.AddRange(Customers);
                 }
-
 
                 context.SaveChanges();
+
+
             }
         }
     }

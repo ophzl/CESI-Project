@@ -16,13 +16,19 @@ namespace api.Models
         public DbSet<WineFamily> WineFamilies { get; set; }
 
         public DbSet<SaleOrder> SaleOrders { get; set; }
-
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
-
-
         public DbSet<Order> Orders { get; set; }
 
 
         public DbSet<Token> Tokens { get; set; }
+
+
+        // protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // {
+        //     modelBuilder.Entity<Product>()
+        //     .HasOne(p => p.DefaultSupplier);
+        //     .WithOne();
+        // }
+
     }
 }

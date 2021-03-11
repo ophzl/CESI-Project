@@ -80,7 +80,7 @@ namespace api.Controllers
 
             if (!saleOrder.Customer_Id.Equals(null))
             {
-                saleOrder.Customer = await _context.Customers.FindAsync((long) saleOrder.Customer_Id);
+                saleOrder.Customer = await _context.Customers.FindAsync((long)saleOrder.Customer_Id);
             }
 
 
@@ -92,14 +92,44 @@ namespace api.Controllers
 
 
             // Changes the stock for each products of SaleOrders.products
-            saleOrder.Orders.ForEach(elem =>
+            saleOrder.Orders.ForEach(async elem =>
             {
                 elem.Product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
                 Total += elem.Product.SellPrice * elem.Quantity;
-                Orders.Add(elem);
 
                 var product = Products.FirstOrDefault(e => e.Id == elem.Product_Id);
                 product.Quantity -= elem.Quantity;
+
+                if (product.Quantity <= 0)
+                {
+                    var Suppliers = await _context.Suppliers.ToListAsync();
+
+                    var autoList = new List<Order>() { new Order { Product = product, Product_Id = product.Id, Quantity = (0 - product.Quantity) + 50 } };
+                    var autoPurchaseOrder = new PurchaseOrder
+                    {
+                        DateTime = DateTime.Now,
+                        Orders = autoList,
+                        Supplier = Suppliers.Find(s => s.Id == product.DefaultSupplier_Id),
+                        Supplier_Id = product.DefaultSupplier_Id
+
+                    };
+
+                    // Purchase logic
+                    double autoTotal = autoList[0].Product.Price * autoList[0].Quantity;
+                    product.Quantity += autoList[0].Quantity;
+
+                    autoList[0].Product = product;
+                    autoPurchaseOrder.Orders = autoList;
+
+                    autoPurchaseOrder.Total = autoTotal;
+                    autoPurchaseOrder.DateTime = DateTime.Now;
+                    autoPurchaseOrder.Status = "LIVRE";
+
+
+                    _context.PurchaseOrders.Add(autoPurchaseOrder);
+                }
+                Orders.Add(elem);
+
             });
 
             saleOrder.Orders = Orders;
@@ -111,7 +141,10 @@ namespace api.Controllers
 
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSaleOrder", new { id = saleOrder.Id }, saleOrder);
+            return CreatedAtAction("GetSaleOrder", new
+            {
+                id = saleOrder.Id
+            }, saleOrder);
         }
 
         // DELETE: api/SaleOrders/5
