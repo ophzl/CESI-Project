@@ -24,7 +24,6 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.TagHelper
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.TagHelpers.output.cache
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.RazorCoreGenerate.cache
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -39,11 +38,6 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.pdb
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.genruntimeconfig.cache
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\web.csproj.CopyComplete
 C:\Users\Anatole\Documents\cours\CsharpProjet\web\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Customers\Create.cshtml.g.cs
-C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Products\Create.cshtml.g.cs
-C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Suppliers\Create.cshtml.g.cs
-C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\WineFamilies\Create.cshtml.g.cs
-C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\WineFamilies\Edit.cshtml.g.cs
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\bin\Debug\net5.0\appsettings.json
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\bin\Debug\net5.0\web.exe
@@ -131,7 +125,14 @@ D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\ref\web.dll
 D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.pdb
 D:\RepositoryDev\cesi\c#\CESI-Project\web\obj\Debug\net5.0\web.genruntimeconfig.cache
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs
+<<<<<<< HEAD
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Home\_Layout.cshtml.g.cs
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Products\Details.cshtml.g.cs
+C:\Users\Anatole\Documents\cours\CsharpProjet\web\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
+=======
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\web\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+>>>>>>> 1a1905f6b2b62dafdb69c420dd8c86d929f2f8e3

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj": {}
+    "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj": {}
   },
   "projects": {
-    "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj": {
+    "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\chevr\\.nuget\\packages\\",
-        "outputPath": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\api\\obj\\",
+        "projectPath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\Anatole\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chevr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Anatole\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
