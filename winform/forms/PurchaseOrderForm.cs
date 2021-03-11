@@ -16,9 +16,9 @@ using System.Threading.Tasks;
 using System.Net.Http;
 namespace winform.forms
 {
-    public partial class ProductForm: MaterialForm
+    public partial class PurchaseOrderForm : MaterialForm
     {
-        public ProductForm()
+        public PurchaseOrderForm()
         {
             InitializeComponent();
 
@@ -26,7 +26,7 @@ namespace winform.forms
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Purple800, Primary.Purple900, Primary.Purple500, Accent.Purple200, TextShade.WHITE);
-            
+
             try
             {
                 var url = "https://localhost:5001/api/WineFamilies/";
@@ -41,31 +41,6 @@ namespace winform.forms
                     comboBox1.DataSource = arr;
                     comboBox1.DisplayMember = "Name";
                     comboBox1.ValueMember = "Id";
-                }
-                else
-                {
-                    MessageBox.Show(string.Format("Status code == {0}", webResponse.StatusCode));
-                }
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-            
-            try
-            {
-                var url = "https://localhost:5001/api/Suppliers/";
-                var webRequest = (HttpWebRequest)WebRequest.Create(url);
-                var webResponse = (HttpWebResponse)webRequest.GetResponse();
-
-                if ((webResponse.StatusCode == HttpStatusCode.OK))
-                {
-                    var reader = new StreamReader(webResponse.GetResponseStream());
-                    string s = reader.ReadToEnd();
-                    var arr = JsonConvert.DeserializeObject<List<Supplier>>(s);
-                    comboBox2.DataSource = arr;
-                    comboBox2.DisplayMember = "Name";
-                    comboBox2.ValueMember = "Id";
                 }
                 else
                 {
@@ -108,31 +83,15 @@ namespace winform.forms
         {
             var product = new Product();
             var name = this.textBox1.Text;
-            var house = this.textBox2.Text;
-            var year = this.textBox3.Text;
-            var price = this.textBox4.Text;
-            var sellPrice = this.textBox5.Text;
+            var price = this.textBox2.Text;
+            var sellPrice = this.textBox3.Text;
 
             product.Name = name;
-            product.House = house;
-            if (this.comboBox1.SelectedValue != null) {
+            if (this.comboBox1.SelectedValue != null)
+            {
+                var familyId = this.comboBox1.SelectedValue;
+                var familyIdConverted = this.comboBox1.SelectedItem.ToString();
                 product.WineFamily_Id = Convert.ToInt64(this.comboBox1.SelectedValue);
-            }
-            else
-            {
-                return;
-            }
-            if (this.comboBox2.SelectedValue != null) {
-                product.DefaultSupplier_Id = Convert.ToInt64(this.comboBox2.SelectedValue);
-            }
-            else
-            {
-                return;
-            }
-            if (int.TryParse(year, out var parsedYear))
-            {
-
-                product.Year = year;
             }
             else
             {
@@ -167,26 +126,6 @@ namespace winform.forms
         private void Annuler_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
-        }
-
-        private void ProductForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

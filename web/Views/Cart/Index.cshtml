@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Panier";
+}
+
+<link rel="stylesheet" href="~/css/home.css" />
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top mb-5" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">WineNot</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wines">Wines</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<h1>Panier</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Maison</th>
+            <th>Prix unitaire</th>
+            <th>Quantité</th>
+            <th>Prix total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="cart">
+    </tbody>
+</table>
+
+<div id="total_price">
+    <p>Total :</p>
+    <p id="total_price"></p>
+</div>
+
+
+        <script>
+            var keys = Object.keys(localStorage)
+
+            const cart_html = document.getElementById("cart")
+            const total_html = document.getElementById("total_price")
+
+            var total = 0
+
+            keys.forEach(async el => {
+                $.ajax({
+                    url: "https://localhost:5001/api/Products/" + el,
+                    type: "GET",
+                    crossDomain: true,
+                    success: function (result) {
+                        var quantity = localStorage.getItem(el)
+                        var price_subtotal = result.price * quantity
+                        total += price_subtotal
+                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.price}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
+                        total_html.innerHTML = `<p>${total}</p>`
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            })
+
+            function removeProduct(product_id) {
+                console.log("Product with id " + product_id + " removed.");
+                localStorage.removeItem(product_id);
+                location.reload();
+            }
+
+            function changeQuantity(product_id) {
+                var str_product_id = '' + product_id
+                var quantity = localStorage.getItem(str_product_id)
+                var final_quantity = parseInt(quantity, 10) - 1
+                localStorage.setItem(product_id, 0)
+            }
+
+        </script>
