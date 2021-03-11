@@ -99,11 +99,6 @@ namespace winform.forms
             return response;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private async void Envoyer_Click(object sender, EventArgs e)
         {
             var product = new Product();
@@ -170,21 +165,6 @@ namespace winform.forms
         }
 
         private void ProductForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
