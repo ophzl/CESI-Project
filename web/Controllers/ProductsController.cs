@@ -40,7 +40,8 @@ namespace web.Controllers
             JArray j = JArray.Parse(t.Result);
             foreach (var elem in j)
             {
-                products.Add(new Product((long)elem["id"],(string)elem["name"],(double)elem["sellPrice"],(string)elem["house"],(string)elem["year"],(string)elem["wineFamily"]["name"]));
+                double boxPrice = (double)elem["sellPrice"] * 6;
+                products.Add(new Product((long)elem["id"],(string)elem["name"],(double)elem["sellPrice"],(string)elem["house"],(string)elem["year"],(string)elem["wineFamily"]["name"],(double)boxPrice,(long)elem["quantity"]));
                 Console.WriteLine(elem["sellPrice"]);
                 houses.Add((string)elem["house"]);
                 years.Add((string)elem["year"]);
@@ -103,7 +104,7 @@ namespace web.Controllers
             var t = Task.Run(() => GetURI(new Uri("https://localhost:5001/api/Products/" + id)));
             t.Wait();
             var j = JObject.Parse(t.Result);
-            Product product = new Product((int)j["id"], (string)j["name"], (double)j["sellPrice"], (string)j["house"], (string)j["year"], (string)j["wineFamily"]["name"]);
+            Product product = new Product((int)j["id"], (string)j["name"], (double)j["sellPrice"], (string)j["house"], (string)j["year"], (string)j["wineFamily"]["name"], (double)j["BoxPrice"], (long)j["Quantity"]);
             return View(product);
         }
 

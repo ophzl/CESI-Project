@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\web.csproj": {}
+    "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj": {}
   },
   "projects": {
-    "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\web.csproj": {
+    "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\web.csproj",
+        "projectUniqueName": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj",
         "projectName": "web",
-        "projectPath": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\web.csproj",
-        "packagesPath": "C:\\Users\\chevr\\.nuget\\packages\\",
-        "outputPath": "D:\\RepositoryDev\\cesi\\c#\\CESI-Project\\web\\obj\\",
+        "projectPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj",
+        "packagesPath": "C:\\Users\\ophel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chevr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ophel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
