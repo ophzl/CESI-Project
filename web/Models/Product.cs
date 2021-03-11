@@ -2,11 +2,11 @@ namespace web.Models
 {
     public class Product
     {
-        public Product(long Id, string Name, double Price, string House, string Year, string WineFamily)
+        public Product(long Id, string Name, double SellPrice, string House, string Year, string WineFamily)
         {
             this.Id = Id;
             this.Name = Name;
-            this.Price = Price;
+            this.SellPrice = SellPrice;
             this.House = House;
             this.Year = Year;
             this.WineFamily = WineFamily;
