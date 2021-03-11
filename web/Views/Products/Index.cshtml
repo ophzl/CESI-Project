@@ -6,23 +6,30 @@
 
 <link rel="stylesheet" href="~/css/home.css" />
 
-<h1>Liste des vins</h1>
+<h4 class="text-gray-700 p-5 font-light text-2xl md:text-4xl">Liste des vins</h4>
 
-<form asp-controller="Products" asp-action="Index" method="get">
-    <p>
-        <select name="house" asp-for="ProductHouse" asp-items="Model.Houses">
-            <option value="">Toutes</option>
-        </select>
-        <select name="year" asp-for="ProductYear" asp-items="Model.Years">
-            <option value="">Toutes</option>
-        </select>
-        <select name="family" asp-for="ProductFamily" asp-items="Model.Families">
-            <option value="">Toutes</option>
-        </select>
-        <input type="submit" value="Filtrer" />
-    </p>
-</form>
+<div class=" flex flex-col md:flex-row w-screen md:items-center px-6">
+    <form asp-controller="Products" asp-action="Index" method="get" class="w-full">
+            <select name="house" asp-for="ProductHouse" asp-items="Model.Houses"
+                class=" bg-gray-200 border-2 border-gray-200 rounded w-1/4 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-50 focus:border-gray-200"
+            >
+                <option value="">Toutes</option>
+            </select>
+            <select name="year" asp-for="ProductYear" asp-items="Model.Years"
+                class=" bg-gray-200 border-2 border-gray-200 rounded w-1/4 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-50 focus:border-gray-200"
+            >
+                <option value="">Toutes</option>
+            </select>
+            <select name="family" asp-for="ProductFamily" asp-items="Model.Families"
+                class=" bg-gray-200 border-2 border-gray-200 rounded w-1/4 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-gray-50 focus:border-gray-200"
+            >
+                <option value="">Toutes</option>
+            </select>
+            <input type="submit" class="py-2 px-4 rounded bg-gray-200 hover:bg-gray-300 duration-300 transition" value="Filtrer" />
+    </form>
+</div>
 
+<div class="p-8">
 <table class="table">
     <tbody>
         @foreach (var item in Model.Products)
@@ -41,12 +48,13 @@
                 @Html.DisplayFor(modelItem => item.House)
             </td>
             <td>
-                <button onclick="setProductToCart(@item.Id)">Add to cart</button>
+                <button class="p-2 bg-gray-50 hover:bg-gray-100 transition duration-300" onclick="setProductToCart(@item.Id)">Add to cart</button>
             </td>
         </tr>
         }
     </tbody>
 </table>
+</div>
 
 <script>
     function setProductToCart(product_id) {
