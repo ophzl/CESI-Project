@@ -108,8 +108,10 @@ namespace winform.forms
         {
             var product = new Product();
             var name = this.textBox1.Text;
-            var price = this.textBox2.Text;
-            var sellPrice = this.textBox3.Text;
+            var house = this.textBox2.Text;
+            var year = this.textBox3.Text;
+            var price = this.textBox4.Text;
+            var sellPrice = this.textBox5.Text;
 
             product.Name = name;
             if (this.comboBox1.SelectedValue != null) {
@@ -125,6 +127,11 @@ namespace winform.forms
             else
             {
                 return;
+            }
+            if (int.TryParse(year, out var parsedYear))
+            {
+
+                product.Year = year;
             }
             if (double.TryParse(price, out var parsedPrice))
             {
