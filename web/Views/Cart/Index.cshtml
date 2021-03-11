@@ -42,6 +42,8 @@
     <p id="total_price"></p>
 </div>
 
+<button onclick="createSaleOrder()">Commander</button>
+
 
         <script>
             var keys = Object.keys(localStorage)
@@ -50,6 +52,7 @@
             const total_html = document.getElementById("total_price")
 
             var total = 0
+            var products = {"orders": []}
 
             keys.forEach(async el => {
                 $.ajax({
@@ -58,10 +61,11 @@
                     crossDomain: true,
                     success: function (result) {
                         var quantity = localStorage.getItem(el)
-                        var price_subtotal = result.price * quantity
+                        var price_subtotal = result.sellPrice * quantity
                         total += price_subtotal
-                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.price}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
+                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.sellPrice}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
                         total_html.innerHTML = `<p>${total}</p>`
+                        products["orders"].push({ "product_Id": result.id, "quantity": parseInt(quantity) })
                     },
                     error: function (error) {
                         console.log(error);
@@ -75,11 +79,23 @@
                 location.reload();
             }
 
-            function changeQuantity(product_id) {
-                var str_product_id = '' + product_id
-                var quantity = localStorage.getItem(str_product_id)
-                var final_quantity = parseInt(quantity, 10) - 1
-                localStorage.setItem(product_id, 0)
+            function createSaleOrder() {
+                $.ajax({
+                    url: "https://localhost:5001/api/SaleOrders",
+                    type: "POST",
+                    crossDomain: true,
+                    data: JSON.stringify(products),
+                    dataType: "json",
+                    contentType: "application/json",
+                    success: function (result) {
+                        console.log("Sale order created.")
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+                localStorage.clear();
+                window.location.replace("https://localhost:5002");
             }
 
         </script>
