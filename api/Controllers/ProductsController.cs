@@ -83,6 +83,12 @@ namespace api.Controllers
             {
                 product.WineFamily = _context.WineFamilies.Find((long)product.WineFamily_Id);
             }
+
+             if (!product.Quantity.Equals(null))
+            {
+                product.Quantity = 0;
+            }
+            
             await _context.SaveChangesAsync();
 
 

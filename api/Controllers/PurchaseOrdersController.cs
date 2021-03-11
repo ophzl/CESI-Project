@@ -105,6 +105,7 @@ namespace api.Controllers
             purchaseOrder.Orders = Orders;
             purchaseOrder.Total = Total;
             purchaseOrder.DateTime = DateTime.Now;
+            purchaseOrder.Status = "LIVRE";
 
 
             _context.PurchaseOrders.Add(purchaseOrder);

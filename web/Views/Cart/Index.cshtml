@@ -1,12 +1,10 @@
-﻿@model List<Cart>
-
-@{
+﻿@{
     ViewData["Title"] = "Panier";
 }
 
 <link rel="stylesheet" href="~/css/home.css" />
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top mb-5" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">WineNot</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +30,7 @@
             <th>Prix unitaire</th>
             <th>Quantité</th>
             <th>Prix total</th>
+            <th></th>
         </tr>
     </thead>
     <tbody id="cart">
@@ -61,7 +60,7 @@
                         var quantity = localStorage.getItem(el)
                         var price_subtotal = result.price * quantity
                         total += price_subtotal
-                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.price}</td><td>${quantity}</td><td>${price_subtotal}</td></tr>`
+                        cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.price}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
                         total_html.innerHTML = `<p>${total}</p>`
                     },
                     error: function (error) {
@@ -69,5 +68,18 @@
                     }
                 });
             })
+
+            function removeProduct(product_id) {
+                console.log("Product with id " + product_id + " removed.");
+                localStorage.removeItem(product_id);
+                location.reload();
+            }
+
+            function changeQuantity(product_id) {
+                var str_product_id = '' + product_id
+                var quantity = localStorage.getItem(str_product_id)
+                var final_quantity = parseInt(quantity, 10) - 1
+                localStorage.setItem(product_id, 0)
+            }
 
         </script>

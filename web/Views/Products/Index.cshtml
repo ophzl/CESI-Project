@@ -24,10 +24,6 @@ Menu
 
 <h1>Liste des vins</h1>
 
-<p>
-    <a asp-action="Create">Ajouter un vin</a>
-</p>
-
 <table class="table">
     <tbody>
         @foreach (var item in Model)
@@ -47,11 +43,6 @@ Menu
             </td>
             <td>
                 <button onclick="setProductToCart(@item.Id)">Add to cart</button>
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
         }

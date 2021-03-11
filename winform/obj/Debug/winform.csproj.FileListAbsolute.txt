@@ -147,3 +147,4 @@ D:\RepositoryDev\cesi\c#\CESI-Project\winform\obj\Debug\winform.csproj.CopyCompl
 D:\RepositoryDev\cesi\c#\CESI-Project\winform\obj\Debug\winform.exe
 D:\RepositoryDev\cesi\c#\CESI-Project\winform\obj\Debug\winform.pdb
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.PurchaseOrderForm.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.PurchaseOrderForm.resources
