@@ -86,7 +86,7 @@ namespace winform.forms
             this.Addresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addresse.Location = new System.Drawing.Point(219, 158);
             this.Addresse.Name = "Addresse";
-            this.Addresse.Size = new System.Drawing.Size(89, 30);
+            this.Addresse.Size = new System.Drawing.Size(71, 24);
             this.Addresse.TabIndex = 9;
             this.Addresse.Text = "Maison";
             // 
@@ -123,7 +123,7 @@ namespace winform.forms
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(443, 158);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 30);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 15;
             this.label1.Text = "Année";
             // 
@@ -208,7 +208,7 @@ namespace winform.forms
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(223, 298);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 30);
+            this.label6.Size = new System.Drawing.Size(0, 24);
             this.label6.TabIndex = 23;
             // 
             // label5
@@ -217,7 +217,7 @@ namespace winform.forms
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(219, 298);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 30);
+            this.label5.Size = new System.Drawing.Size(111, 24);
             this.label5.TabIndex = 25;
             this.label5.Text = "Fournisseur";
             // 

@@ -108,10 +108,13 @@ namespace winform.forms
         {
             var product = new Product();
             var name = this.textBox1.Text;
-            var price = this.textBox2.Text;
-            var sellPrice = this.textBox3.Text;
+            var house = this.textBox2.Text;
+            var year = this.textBox3.Text;
+            var price = this.textBox4.Text;
+            var sellPrice = this.textBox5.Text;
 
             product.Name = name;
+            product.House = house;
             if (this.comboBox1.SelectedValue != null) {
                 product.WineFamily_Id = Convert.ToInt64(this.comboBox1.SelectedValue);
             }
@@ -121,6 +124,15 @@ namespace winform.forms
             }
             if (this.comboBox2.SelectedValue != null) {
                 product.DefaultSupplier_Id = Convert.ToInt64(this.comboBox2.SelectedValue);
+            }
+            else
+            {
+                return;
+            }
+            if (int.TryParse(year, out var parsedYear))
+            {
+
+                product.Year = year;
             }
             else
             {
