@@ -2,6 +2,16 @@
     ViewData["Title"] = "Panier";
 }
 
+<style>
+    .modal {
+      transition: opacity 0.25s ease;
+    }
+    body.modal-active {
+      overflow-x: hidden;
+      overflow-y: visible !important;
+    }
+  </style>
+
 <div class="flex flex-col md:grid grid-cols-5 w-full" style="height: 90vh">
     <div class="col-span-3 bg-red-900 p-8 xl:p-16 h-full">
         <h4 class="text-white font-light text-2xl md:text-4xl mb-5">Nos suggestions</h4>
@@ -23,10 +33,107 @@
                 Total : <span id="total_price"
                               class="font-extrabold"></span>
             </p>
-            <button class="bg-red-900 px-5 py-3 text-white font-bold m-5" onclick="createSaleOrder()">Payer</button>
+            <button class="bg-red-900 rounded-lg px-5 py-3 text-white font-bold m-5 modal-open">Payer</button>
         </div>
     </div>
 </div>
+
+<div class="modal hidden pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+    
+    <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+      
+      <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+        <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+        </svg>
+        <span class="text-sm">(Esc)</span>
+      </div>
+
+      <!-- Add margin if you want to see some of the overlay behind the modal-->
+      <div class="modal-content py-4 text-left px-6">
+        <!--Title-->
+        <div class="flex justify-between items-center pb-3">
+          <p class="text-2xl font-bold">Commande</p>
+          <div class="modal-close cursor-pointer z-50">
+            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+              <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!--Body-->
+        <div>
+            <h4 class="font-semibold mb-2">S'inscrire</h4>
+            <div class="flex flex-col space-y-3">
+                <input id="name" placeholder="Nom" 
+                    class=" bg-gray-200 border-2 border-gray-200 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:bg-gray-50 focus:border-gray-200">
+                <input id="address" placeholder="Adresse postale" 
+                    class=" bg-gray-200 border-2 border-gray-200 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:bg-gray-50 focus:border-gray-200">
+                <input id="email" placeholder="Adresse mail" 
+                    class=" bg-gray-200 border-2 border-gray-200 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:bg-gray-50 focus:border-gray-200">
+                <button id="btnCus" onclick="createCustomer()" class="px-4 bg-red-800 py-2 rounded-lg text-red-100 hover:bg-red-900 mt-3">S'inscrire</button>
+                <hr class="m-2">
+                <h4 class="font-semibold mb-2">Se connecter</h4>
+                <select id="customersList"
+                    class="bg-gray-200 border-2 border-gray-200 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:bg-gray-50 focus:border-gray-200">
+                    <option>Choisissez un client...</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+        <div class="flex justify-end pt-2">
+          <button id="btnSale" onclick="createSaleOrder()" disabled class="px-4 bg-red-800 p-3 rounded-lg text-red-100 hover:bg-red-900 mr-2">Commander</button>
+          <button class="modal-close px-4 bg-gray-500 p-3 rounded-lg text-white hover:bg-gray-400">Fermer</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var openmodal = document.querySelectorAll('.modal-open')
+    for (var i = 0; i < openmodal.length; i++) {
+      openmodal[i].addEventListener('click', function(event){
+    	event.preventDefault()
+    	toggleModal()
+      })
+    }
+    
+    const overlay = document.querySelector('.modal-overlay')
+    overlay.addEventListener('click', toggleModal)
+    
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+      closemodal[i].addEventListener('click', toggleModal)
+    }
+    
+    document.onkeydown = function(evt) {
+      evt = evt || window.event
+      var isEscape = false
+      if ("key" in evt) {
+    	isEscape = (evt.key === "Escape" || evt.key === "Esc")
+      } else {
+    	isEscape = (evt.keyCode === 27)
+      }
+      if (isEscape && document.body.classList.contains('modal-active')) {
+    	toggleModal()
+      }
+    };
+    
+    
+    function toggleModal () {
+      const body = document.querySelector('body')
+      const modal = document.querySelector('.modal')
+      modal.classList.toggle('hidden')
+      modal.classList.toggle('pointer-events-none')
+      body.classList.toggle('modal-active')
+    }
+    
+     
+  </script>
 
 <script>
     var keys = Object.keys(localStorage)
@@ -75,7 +182,61 @@
                 <button class="p-2 bg-gray-50 hover:bg-gray-100 transition duration-300 break-words" onclick="setProductToCart(${el.id})">Add to cart</button>
             </div>`
         })
+
+        const customer_root = document.getElementById('customersList');
+
+        $.ajax({
+            url: 'https://localhost:5001/api/Customers',
+            type: "GET",
+            crossDomain: true,
+            success: function (result) {
+                result.forEach(el => {
+                    customer_root.innerHTML += `<option value="${el.id}">${el.name} - ${el.address}</option>`
+                })
+            },
+            error: function(err) {}
+        })
+
+        
+
+        
     })
+
+    async function createCustomer() {
+        let name = document.getElementById('name').value;
+        let address = document.getElementById('address').value;
+        let email = document.getElementById('email').value;
+        $.ajax({
+            url: "https://localhost:5001/api/Customers",
+            type: "POST",
+            dataType: 'application/json',
+            data: JSON.stringify({
+                name: name,
+                address: address,
+                email: email,
+            }),
+            crossDomain: true,
+            success: function (result) {
+                products['customer_id'] = result.id
+                document.getElementById('btnSale').removeAttribute('disabled');
+                const customer_root = document.getElementById('customersList');
+
+                $.ajax({
+                    url: 'https://localhost:5001/api/Customers',
+                    type: "GET",
+                    crossDomain: true,
+                    success: function (res) {
+                        customer_root.innerHTML = "";
+                        res.forEach(el => {
+                            customer_root.innerHTML += `<option value="${el.id}" ${result.id === el.id ? "selected" : ""}>${el.name} - ${el.address}</option>`
+                        })
+                    },
+                    error: function(err) {}
+                })
+            },
+            error: function(err) {}
+        })
+    }
 
     function init() {
         keys = Object.keys(localStorage)
@@ -95,17 +256,17 @@
                 <div class="bg-gray-200 rounded-lg p-4 mx-5 my-1 flex flex-row justify-between">
                     <div class="flex flex-col">
                         <h5 class="flex flex-row font-bold mb-2">${result.name} - <span class="font-semibold mr-1">${result.house}</span></h5>
-                        <p class="font-extrabold">${result.sellPrice}</p>
+                        <p class="font-extrabold">${result.sellPrice}€</p>
                     </div>
                     <div class="flex flex-col">
                         <h5 class="mb-2">x${quantity}</h5>
-                        <p class="font-semibold">${price_subtotal}</p>
+                        <p class="font-semibold">${price_subtotal}€</p>
                     </div>
                     <button class="p-3 bg-red-100 text-gray-900 hover:bg-red-500 hover:text-gray-800 duration-300 transition" onclick="removeProduct(${result.id})">X</button>
                 </div>
                 `
 
-                    total_html.innerHTML = `<p>${total}</p>`
+                    total_html.innerHTML = `<p>${total}€</p>`
                     products["orders"].push({ "product_Id": result.id, "quantity": parseInt(quantity) })
                 },
                 error: function (error) {
@@ -122,6 +283,7 @@
     }
 
     function createSaleOrder() {
+        console.log("here")
         $.ajax({
             url: "https://localhost:5001/api/SaleOrders",
             type: "POST",
@@ -139,5 +301,13 @@
         localStorage.clear();
         window.location.replace("https://localhost:5002");
     }
+
+    //document.getElementById('btnSale').addEventListener('click',createSaleOrder);
+    //document.getElementById('btnCus').addEventListener('click', createCustomer);
+
+    document.getElementById('customersList').addEventListener('change', (e) => {
+        products['customer_id'] = e.target.value;
+        document.getElementById('btnSale').removeAttribute('disabled');
+    });
 
 </script>
