@@ -10,6 +10,9 @@ using MaterialSkin.Controls;
 using MaterialSkin;
 using winform.Models;
 using winform.forms;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Text;
 
 namespace winform
 {
@@ -228,11 +231,13 @@ namespace winform
             }
         }
 
-        private void materialFlatButton11_Click(object sender, EventArgs e)
+        private async void materialFlatButton11_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView2.SelectedRows)
             {
+                Customer cust = row.DataBoundItem as Customer;
                 dataGridView2.Rows.RemoveAt(row.Index);
+                await deleteEntityAsync("customers", cust.Id);
             }
         }
 
@@ -248,11 +253,13 @@ namespace winform
             }
         }
 
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        private async void materialRaisedButton1_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView4.SelectedRows)
             {
+                Supplier sup = row.DataBoundItem as Supplier;
                 dataGridView4.Rows.RemoveAt(row.Index);
+                await deleteEntityAsync("suppliers", sup.Id);
             }
         }
 
@@ -268,11 +275,13 @@ namespace winform
             }
         }
 
-        private void materialFlatButton15_Click(object sender, EventArgs e)
+        private async void materialFlatButton15_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView3.SelectedRows)
             {
+                WineFamily family = row.DataBoundItem as WineFamily;
                 dataGridView3.Rows.RemoveAt(row.Index);
+                await deleteEntityAsync("wineFamilies", family.Id);
             }
         }
 
@@ -289,12 +298,41 @@ namespace winform
             }
         }
 
-        private void materialFlatButton18_Click(object sender, EventArgs e)
+        private async void materialFlatButton18_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
             {
+                Product product = row.DataBoundItem as Product;
                 dataGridView1.Rows.RemoveAt(row.Index);
+                await deleteEntityAsync("products", product.Id);
             }
+        }
+
+        private async Task deleteEntityAsync(string entityName, long entityId)
+        {
+            HttpContent content = new StringContent( "", Encoding.UTF8, "application/json");
+            var t = await Task.Run(() => SendURI(new Uri("https://localhost:5001/api/" + entityName + '/' + entityId), content));
+        }
+
+        static async Task<string> SendURI(Uri u, HttpContent c)
+        {
+            var response = string.Empty;
+            using (var client = new HttpClient())
+            {
+                HttpRequestMessage request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Delete,
+                    RequestUri = u,
+                    Content = c
+                };
+
+                HttpResponseMessage result = await client.SendAsync(request);
+                if (result.IsSuccessStatusCode)
+                {
+                    response = result.StatusCode.ToString();
+                }
+            }
+            return response;
         }
     }
 }
