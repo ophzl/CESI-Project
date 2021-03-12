@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web", "web\web.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winform", "winform\winform.csproj", "{7A3391F4-6DC1-4312-8F60-98B211462595}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupWinform", "SetupWinform\SetupWinform.vdproj", "{508AB867-C12D-4667-A5A1-16439061858C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +25,12 @@ Global
 		{FD35D51A-979C-4411-93B4-916DDE4D4E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD35D51A-979C-4411-93B4-916DDE4D4E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD35D51A-979C-4411-93B4-916DDE4D4E0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A3391F4-6DC1-4312-8F60-98B211462595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A3391F4-6DC1-4312-8F60-98B211462595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3391F4-6DC1-4312-8F60-98B211462595}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3391F4-6DC1-4312-8F60-98B211462595}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{7A3391F4-6DC1-4312-8F60-98B211462595}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A3391F4-6DC1-4312-8F60-98B211462595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508AB867-C12D-4667-A5A1-16439061858C}.Debug|Any CPU.ActiveCfg = Debug
+		{508AB867-C12D-4667-A5A1-16439061858C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

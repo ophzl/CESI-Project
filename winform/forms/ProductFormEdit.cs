@@ -123,6 +123,7 @@ namespace winform.forms
             product.Id = this.product.Id;
             product.Name = name;
             product.House = house;
+            product.Quantity = this.product.Quantity ;
             if (this.comboBox1.SelectedValue != null) {
                 product.WineFamily_Id = Convert.ToInt64(this.comboBox1.SelectedValue);
             }

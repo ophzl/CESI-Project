@@ -29,6 +29,7 @@ namespace winform
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wine));
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
@@ -551,6 +552,7 @@ namespace winform
             this.ClientSize = new System.Drawing.Size(1092, 679);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.materialTabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Wine";
             this.Text = "WineNot";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
