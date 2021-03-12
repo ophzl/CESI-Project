@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\api\\api.csproj": {}
+    "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\api\\api.csproj": {
+    "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\ophel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\api\\obj\\",
+        "projectPath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\Anatole\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ophel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Anatole\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

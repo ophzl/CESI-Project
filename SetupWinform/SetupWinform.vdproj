@@ -782,7 +782,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetupWinform"
         "ProductCode" = "8:{36CA2FA2-7116-4FAF-A7BB-80D6963B8B5A}"
-        "PackageCode" = "8:{2BD27211-7F35-4F72-BF34-1D75819E1C65}"
+        "PackageCode" = "8:{686C559A-9E9F-4A58-9636-B801D423D5D9}"
         "UpgradeCode" = "8:{F341E1F3-BB3A-4EAB-8904-01037D7CFF4D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -904,7 +904,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_93126D81464C4201B240C2F42E34FA7D"
             {
-            "Name" = "8:Isntaller WineNot winform"
+            "Name" = "8:WineNot winform"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -918,7 +918,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B125474B0A2546339BFD9E2DF73718A5"
             {
-            "Name" = "8:Installer WineNot winform"
+            "Name" = "8:WineNot winform"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -1331,7 +1331,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0A26BB97A6184DAEA72E9C64D945D1BB"
             {
-            "SourcePath" = "8:..\\winform\\obj\\Debug\\winform.exe"
+            "SourcePath" = "8:..\\winform\\obj\\Release\\winform.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_55F1DE5CA3FE4762925F4D0EA17EDCD9"

@@ -38,3 +38,4 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.csproj
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.csproj.CopyComplete
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.exe
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.pdb
+C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.csprojAssemblyReference.cache
