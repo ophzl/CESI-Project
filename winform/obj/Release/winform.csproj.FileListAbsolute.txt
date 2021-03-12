@@ -38,3 +38,6 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.csproj
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.csproj.CopyComplete
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.exe
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Release\winform.pdb
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Release\winform.csprojAssemblyReference.cache
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Release\winform.exe
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Release\winform.pdb
