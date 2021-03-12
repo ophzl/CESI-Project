@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1/LJ1CsiSGYLQVtq7BOQR44V8oMt5yb8xG2JdZnKCk/hbsuHKqLnpt3JIvzTq4dnjbZepQGKtp/XkJkOwoCbSg==",
+  "dgSpecHash": "gkmoq4z76dPF5CcUl9fPrShKDs30Rr2qbY+Yxk65lLDlExfrYzatqL3ObszxEIlqh864aiK97SWbY8wsdjckhw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\api\\api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ophel\\.nuget\\packages\\alertifyjs\\1.13.1\\alertifyjs.1.13.1.nupkg.sha512",
     "C:\\Users\\ophel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ophel\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\ophel\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
