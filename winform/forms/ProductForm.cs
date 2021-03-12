@@ -134,7 +134,7 @@ namespace winform.forms
             {
                 return;
             }
-            if (int.TryParse(stocks, out var parsedStocks))
+            if (long.TryParse(stocks, out var parsedStocks))
             {
 
                 product.Quantity = parsedStocks;

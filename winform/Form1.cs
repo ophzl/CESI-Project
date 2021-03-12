@@ -26,24 +26,7 @@ namespace winform
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Purple800, Primary.Purple900, Primary.Purple500, Accent.Purple200, TextShade.WHITE);
-            this.formProduct = new ProductForm();
-            this.formCustomer = new CustormerForm();
-            this.formWineFamily = new WineFamilyForm();
-            this.formSupplier = new SupplierForm();
-            this.formPurchaseOrder = new PurchaseOrderForm();
-
-            this.formProduct.Visible = false;
-            this.formCustomer.Visible = false;
-            this.formWineFamily.Visible = false;
-            this.formSupplier.Visible = false;
-            this.formSupplier.Visible = false;
-            this.formPurchaseOrder.Visible = false;
         }
-        CustormerForm formCustomer;
-        ProductForm formProduct;
-        WineFamilyForm formWineFamily;
-        SupplierForm formSupplier;
-        PurchaseOrderForm formPurchaseOrder;
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
@@ -196,27 +179,27 @@ namespace winform
 
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
-            this.formProduct.Visible = true;
+            new ProductForm().Visible = true;
         }
 
         private void materialFlatButton4_Click(object sender, EventArgs e)
         {
-                this.formCustomer.Visible = true;
+            new CustormerForm().Visible = true;
         }
 
         private void materialFlatButton5_Click(object sender, EventArgs e)
         {
-            this.formWineFamily.Visible = true;
+            new WineFamilyForm().Visible = true;
         }
 
         private void materialFlatButton7_Click(object sender, EventArgs e)
         {
-            this.formSupplier.Visible = true;
+            new SupplierForm().Visible = true;
         }
 
         private void materialFlatButton9_Click(object sender, EventArgs e)
         {
-            this.formPurchaseOrder.Visible = true;
+            new PurchaseOrderForm().Visible = true;
         }
 
         private void materialFlatButton12_Click(object sender, EventArgs e)

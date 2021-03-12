@@ -83,6 +83,7 @@ namespace winform.forms
             this.textBox3.Text = prod.Year;
             this.textBox4.Text = prod.Price.ToString();
             this.textBox5.Text = prod.SellPrice.ToString();
+            this.textBox6.Text = prod.Quantity.ToString();
             this.comboBox1.SelectedValue = prod.WineFamily_Id;
             this.comboBox2.SelectedValue = prod.DefaultSupplier_Id;
             
@@ -148,7 +149,7 @@ namespace winform.forms
                 return;
             }
 
-            if (int.TryParse(stocks, out var parsedStocks))
+            if (long.TryParse(stocks, out var parsedStocks))
             {
                 product.Quantity = parsedStocks;
             }
