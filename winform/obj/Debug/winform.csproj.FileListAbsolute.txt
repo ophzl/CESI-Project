@@ -152,3 +152,7 @@ C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.Cu
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.SupplierFormEdit.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.WineFamilyFormEdit.resources
 C:\Users\Anatole\Documents\cours\CsharpProjet\winform\obj\Debug\winform.forms.ProductFormEdit.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.CustormerFormEdit.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.ProductFormEdit.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.SupplierFormEdit.resources
+C:\Users\ophel\OneDrive\Documents\CESI\Formation Analyste Programmeur\C#\Projet Vins v2\CESI-Project\winform\obj\Debug\winform.forms.WineFamilyFormEdit.resources

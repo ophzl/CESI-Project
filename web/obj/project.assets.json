@@ -568,19 +568,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Anatole\\.nuget\\packages\\": {}
+    "C:\\Users\\ophel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\web\\web.csproj",
+      "projectUniqueName": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj",
       "projectName": "web",
-      "projectPath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\web\\web.csproj",
-      "packagesPath": "C:\\Users\\Anatole\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anatole\\Documents\\cours\\CsharpProjet\\web\\obj\\",
+      "projectPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\web.csproj",
+      "packagesPath": "C:\\Users\\ophel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ophel\\OneDrive\\Documents\\CESI\\Formation Analyste Programmeur\\C#\\Projet Vins v2\\CESI-Project\\web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Anatole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ophel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

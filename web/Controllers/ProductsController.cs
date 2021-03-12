@@ -104,7 +104,8 @@ namespace web.Controllers
             var t = Task.Run(() => GetURI(new Uri("https://localhost:5001/api/Products/" + id)));
             t.Wait();
             var j = JObject.Parse(t.Result);
-            Product product = new Product((int)j["id"], (string)j["name"], (double)j["sellPrice"], (string)j["house"], (string)j["year"], (string)j["wineFamily"]["name"], (double)j["BoxPrice"], (long)j["Quantity"]);
+            double boxPrice = (double)j["sellPrice"] * 6;
+            Product product = new Product((int)j["id"], (string)j["name"], (double)j["sellPrice"], (string)j["house"], (string)j["year"], (string)j["wineFamily"]["name"], (double)boxPrice, (long)j["quantity"]);
             return View(product);
         }
 

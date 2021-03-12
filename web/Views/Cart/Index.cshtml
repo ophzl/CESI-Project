@@ -165,8 +165,6 @@
 
         const product_root = document.getElementById('products');
 
-
-
         body.forEach(el => {
             product_root.innerHTML += `
             <div class="bg-gray-200 p-2 rounded-lg flex flex-row items-center justify-between">
@@ -196,9 +194,6 @@
             },
             error: function(err) {}
         })
-
-        
-
         
     })
 
@@ -282,7 +277,12 @@
         location.reload();
     }
 
-    function createSaleOrder() {
+    function sleep(ms) {
+        console.log("Sleep...")
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function createSaleOrder() {
         console.log("here")
         $.ajax({
             url: "https://localhost:5001/api/SaleOrders",
@@ -299,6 +299,8 @@
             }
         });
         localStorage.clear();
+        alertify.alert("Votre commande a bien été prise en compte.\n Vous allez être redirigé dans quelques instants...")
+        await sleep(2000);
         window.location.replace("https://localhost:5002");
     }
 

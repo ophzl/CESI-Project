@@ -5,41 +5,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WineNot | @ViewData["Title"]</title>
-    	<link rel="icon" type="image/png" href="https://img.icons8.com/plasticine/2x/wine-glass.png" />
+    <link rel="icon" type="image/png" href="https://img.icons8.com/plasticine/2x/wine-glass.png" />
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css"
-        integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ=="
-        crossorigin="anonymous" />
+          integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ=="
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
 </head>
 
 <body>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-        <header class="text-gray-600 body-font px-8 z-30 top-0 shadow sticky bg-white md:bg-opacity-90 transition duration-300 ease-in-out blur">
-            <div class="container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center">
-                <a class="flex title-font font-medium items-center text-gray-900 " href="/">
-                    <div class="w-10 h-10 text-white bg-red-800 rounded-full">
-                    	<img class="w-10 h-10" src="https://img.icons8.com/plasticine/2x/wine-glass.png" alt="Icon" />
+    <header class="text-gray-600 body-font px-8 z-30 top-0 shadow sticky bg-white md:bg-opacity-90 transition duration-300 ease-in-out blur">
+        <div class="container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 " href="/">
+                <div class="w-10 h-10 text-white bg-red-800 rounded-full">
+                    <img class="w-10 h-10" src="https://img.icons8.com/plasticine/2x/wine-glass.png" alt="Icon" />
 
-                    </div>
-                    <span class="ml-3 text-xl">WineNot</span>
-                </a>
-                <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                    <a class="mr-5 hover:text-gray-900" href="/products">Nos vins</a>
-                    <a class="mr-5 hover:text-gray-900" href="mailto:contact@negosud.fr">Nous contacter</a>
-                    <a class="mr-5 hover:text-gray-900" href="/cart">Panier</a>
-                </nav>
-                
-            </div>
-        </header>
-        <main role="main" class="">
-            @RenderBody()
-        </main>
+                </div>
+                <span class="ml-3 text-xl">WineNot</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href="/products">Nos vins</a>
+                <a class="mr-5 hover:text-gray-900">Nous contacter</a>
+                <a class="mr-5 hover:text-gray-900" href="/cart">Panier</a>
+            </nav>
 
+        </div>
+    </header>
+    <main role="main" class="">
+        @RenderBody()
+    </main>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
