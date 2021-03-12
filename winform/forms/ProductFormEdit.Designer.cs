@@ -217,7 +217,7 @@ namespace winform.forms
             this.label5.TabIndex = 25;
             this.label5.Text = "Fournisseur";
             // 
-            // ProductForm
+            // ProductFormEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,8 +239,8 @@ namespace winform.forms
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.nom);
             this.Controls.Add(this.textBox1);
-            this.Name = "ProductForm";
-            this.Text = "Ajout d\'un nouveau vin";
+            this.Name = "ProductFormEdit";
+            this.Text = "Mettre à jour un vin";
             this.Load += new System.EventHandler(this.ProductForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
