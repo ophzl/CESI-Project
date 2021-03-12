@@ -1,39 +1,43 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Panier";
+}
 
-	<div class="flex flex-col md:grid grid-cols-5 w-full" style="height: 90vh">
-		<div class="col-span-3 bg-red-900 p-8 xl:p-16 h-full">
-			<h4 class="text-white font-light text-2xl md:text-4xl mb-5">Nos suggestions</h4>
-			<div class="flex flex-col lg:grid grid-cols-2 gap-4 content-center" id="products">
-				
-			</div>
-		</div>
+<div class="flex flex-col md:grid grid-cols-5 w-full" style="height: 90vh">
+    <div class="col-span-3 bg-red-900 p-8 xl:p-16 h-full">
+        <h4 class="text-white font-light text-2xl md:text-4xl mb-5">Nos suggestions</h4>
+        <div class="flex flex-col lg:grid grid-cols-2 gap-4 content-center" id="products">
 
-		<div class="relative h-full bg-gray-100 col-span-2 flex flex-col justify-between">
-			<div class="flex flex-row justify-center p-5">
-				<p class="tracking-widest text-2xl font-bold">Panier</p>
-			</div>
-			<div class="flex flex-col" id="cart">
+        </div>
+    </div>
 
-			</div>
+    <div class="relative h-full bg-gray-100 col-span-2 flex flex-col justify-between">
+        <div class="flex flex-row justify-center p-5">
+            <p class="tracking-widest text-2xl font-bold">Panier</p>
+        </div>
+        <div class="flex flex-col" id="cart">
 
-			<div class="flex flex-col">
-				<p class="tracking-wide font-semibold text-gray-700 px-10 my-4">Total : <span id="total_price"
-						class="font-extrabold"></span></p>
-				<button class="bg-red-900 px-5 py-3 text-white font-bold m-5" onclick="createSaleOrder()">Payer</button>
-			</div>
-		</div>
-	</div>
+        </div>
+
+        <div class="flex flex-col">
+            <p class="tracking-wide font-semibold text-gray-700 px-10 my-4">
+                Total : <span id="total_price"
+                              class="font-extrabold"></span>
+            </p>
+            <button class="bg-red-900 px-5 py-3 text-white font-bold m-5" onclick="createSaleOrder()">Payer</button>
+        </div>
+    </div>
+</div>
 
 <script>
-	var keys = Object.keys(localStorage)
+    var keys = Object.keys(localStorage)
 
-	const cart_html = document.getElementById("cart")
-	const total_html = document.getElementById("total_price")
+    const cart_html = document.getElementById("cart")
+    const total_html = document.getElementById("total_price")
 
-	var total = 0
-	var products = { "orders": [] }
+    var total = 0
+    var products = { "orders": [] }
 
-	function setProductToCart(product_id) {
+    function setProductToCart(product_id) {
         var str_product_id = '' + product_id
         if (!localStorage.getItem(str_product_id)) {
             localStorage.setItem(str_product_id, 1)
@@ -44,96 +48,96 @@
             localStorage.setItem(product_id, str_final_quantity)
             console.log(localStorage)
         }
-		init();
+        init();
     }
 
-	$(document).ready(async () => {
-		init();
-		const res =await fetch('https://localhost:5001/api/Products');
-		const body = await res.json();
+    $(document).ready(async () => {
+        init();
+        const res = await fetch('https://localhost:5001/api/Products');
+        const body = await res.json();
 
-		const product_root = document.getElementById('products');
+        const product_root = document.getElementById('products');
 
 
 
-		body.forEach(el => {
-			product_root.innerHTML += `
-			<div class="bg-gray-200 p-2 rounded-lg flex flex-row items-center justify-between">
-				<div class="flex flex-row items-center">
-					<img class="w-24 h-24 mr-3" src="https://via.placeholder.com/150" alt="${el.name}">
-					<div class="flex-col">
-						<p class="font-bold">${el.name}</p>
-						<div class="flex-row">
-							<span class="font-semibold">${el.house}</span> <span class="mr-1">${el.year}</span>
-						</div>
-					</div>
-				</div>
-				<button class="p-2 bg-gray-50 hover:bg-gray-100 transition duration-300 break-words" onclick="setProductToCart(${el.id})">Add to cart</button>
-			</div>`
-		})
-	})
+        body.forEach(el => {
+            product_root.innerHTML += `
+            <div class="bg-gray-200 p-2 rounded-lg flex flex-row items-center justify-between">
+                <div class="flex flex-row items-center">
+                    <img class="w-24 h-24 mr-3" src="https://via.placeholder.com/150" alt="${el.name}">
+                    <div class="flex-col">
+                        <p class="font-bold">${el.name}</p>
+                        <div class="flex-row">
+                            <span class="font-semibold">${el.house}</span> <span class="mr-1">${el.year}</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="p-2 bg-gray-50 hover:bg-gray-100 transition duration-300 break-words" onclick="setProductToCart(${el.id})">Add to cart</button>
+            </div>`
+        })
+    })
 
-	function init() {
-		keys = Object.keys(localStorage)
-		cart_html.innerHTML = "";
-		keys.forEach(async el => {
-			
-		$.ajax({
-			url: "https://localhost:5001/api/Products/" + el,
-			type: "GET",
-			crossDomain: true,
-			success: function (result) {
-				var quantity = localStorage.getItem(el)
-				var price_subtotal = result.sellPrice * quantity
-				total += price_subtotal
-				//cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.sellPrice}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
-				cart_html.innerHTML += `
-				<div class="bg-gray-200 rounded-lg p-4 mx-5 my-1 flex flex-row justify-between">
-					<div class="flex flex-col">
-						<h5 class="flex flex-row font-bold mb-2">${result.name} - <span class="font-semibold mr-1">${result.house}</span></h5>
-						<p class="font-extrabold">${result.sellPrice}</p>
-					</div>
-					<div class="flex flex-col">
-						<h5 class="mb-2">x${quantity}</h5>
-						<p class="font-semibold">${price_subtotal}</p>
-					</div>
-					<button class="p-3 bg-red-100 text-gray-900 hover:bg-red-500 hover:text-gray-800 duration-300 transition" onclick="removeProduct(${result.id})">X</button>
-				</div>
-				`
+    function init() {
+        keys = Object.keys(localStorage)
+        cart_html.innerHTML = "";
+        keys.forEach(async el => {
 
-				total_html.innerHTML = `<p>${total}</p>`
-				products["orders"].push({ "product_Id": result.id, "quantity": parseInt(quantity) })
-			},
-			error: function (error) {
-				console.log(error);
-			}
-		});
-	})
-	}
+            $.ajax({
+                url: "https://localhost:5001/api/Products/" + el,
+                type: "GET",
+                crossDomain: true,
+                success: function (result) {
+                    var quantity = localStorage.getItem(el)
+                    var price_subtotal = result.sellPrice * quantity
+                    total += price_subtotal
+                    //cart_html.innerHTML += `<tr><td>${result.name}</td><td>${result.house}</td><td>${result.sellPrice}</td><td>${quantity}</td><td>${price_subtotal}</td><td><button onclick="removeProduct(${result.id})">X</button></tr>`
+                    cart_html.innerHTML += `
+                <div class="bg-gray-200 rounded-lg p-4 mx-5 my-1 flex flex-row justify-between">
+                    <div class="flex flex-col">
+                        <h5 class="flex flex-row font-bold mb-2">${result.name} - <span class="font-semibold mr-1">${result.house}</span></h5>
+                        <p class="font-extrabold">${result.sellPrice}</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <h5 class="mb-2">x${quantity}</h5>
+                        <p class="font-semibold">${price_subtotal}</p>
+                    </div>
+                    <button class="p-3 bg-red-100 text-gray-900 hover:bg-red-500 hover:text-gray-800 duration-300 transition" onclick="removeProduct(${result.id})">X</button>
+                </div>
+                `
 
-	function removeProduct(product_id) {
-		console.log("Product with id " + product_id + " removed.");
-		localStorage.removeItem(product_id);
-		location.reload();
-	}
+                    total_html.innerHTML = `<p>${total}</p>`
+                    products["orders"].push({ "product_Id": result.id, "quantity": parseInt(quantity) })
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        })
+    }
 
-	function createSaleOrder() {
-		$.ajax({
-			url: "https://localhost:5001/api/SaleOrders",
-			type: "POST",
-			crossDomain: true,
-			data: JSON.stringify(products),
-			dataType: "json",
-			contentType: "application/json",
-			success: function (result) {
-				console.log("Sale order created.")
-			},
-			error: function (error) {
-				console.log(error);
-			}
-		});
-		localStorage.clear();
-		window.location.replace("https://localhost:5002");
-	}
+    function removeProduct(product_id) {
+        console.log("Product with id " + product_id + " removed.");
+        localStorage.removeItem(product_id);
+        location.reload();
+    }
+
+    function createSaleOrder() {
+        $.ajax({
+            url: "https://localhost:5001/api/SaleOrders",
+            type: "POST",
+            crossDomain: true,
+            data: JSON.stringify(products),
+            dataType: "json",
+            contentType: "application/json",
+            success: function (result) {
+                console.log("Sale order created.")
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+        localStorage.clear();
+        window.location.replace("https://localhost:5002");
+    }
 
 </script>
