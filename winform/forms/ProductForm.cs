@@ -107,6 +107,7 @@ namespace winform.forms
             var year = this.textBox3.Text;
             var price = this.textBox4.Text;
             var sellPrice = this.textBox5.Text;
+            var stocks = this.textBox6.Text;
 
             product.Name = name;
             product.House = house;
@@ -128,6 +129,15 @@ namespace winform.forms
             {
 
                 product.Year = year;
+            }
+            else
+            {
+                return;
+            }
+            if (int.TryParse(stocks, out var parsedStocks))
+            {
+
+                product.Quantity = parsedStocks;
             }
             else
             {
@@ -165,6 +175,11 @@ namespace winform.forms
         }
 
         private void ProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }

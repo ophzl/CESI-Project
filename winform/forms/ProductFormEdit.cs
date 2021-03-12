@@ -119,11 +119,11 @@ namespace winform.forms
             var year = this.textBox3.Text;
             var price = this.textBox4.Text;
             var sellPrice = this.textBox5.Text;
+            var stocks = this.textBox6.Text;
 
             product.Id = this.product.Id;
             product.Name = name;
             product.House = house;
-            product.Quantity = this.product.Quantity ;
             if (this.comboBox1.SelectedValue != null) {
                 product.WineFamily_Id = Convert.ToInt64(this.comboBox1.SelectedValue);
             }
@@ -142,6 +142,15 @@ namespace winform.forms
             {
 
                 product.Year = year;
+            }
+            else
+            {
+                return;
+            }
+
+            if (int.TryParse(stocks, out var parsedStocks))
+            {
+                product.Quantity = parsedStocks;
             }
             else
             {
