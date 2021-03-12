@@ -92,6 +92,12 @@
     <Compile Include="forms\CustormerFormEdit.Designer.cs">
       <DependentUpon>CustormerFormEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\ProductFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ProductFormEdit.Designer.cs">
+      <DependentUpon>ProductFormEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\CustormerFormEdit.resx">
       <DependentUpon>CustormerFormEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ProductFormEdit.resx">
+      <DependentUpon>ProductFormEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
