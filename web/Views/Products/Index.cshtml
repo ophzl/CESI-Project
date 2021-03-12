@@ -31,6 +31,17 @@
 
 <div class="p-8">
 <table class="table">
+    <thead>
+        <tr class="font-weight-bold">
+            <td>Nom</td>
+            <td>Famille</td>
+            <td>Prix unitaire</td>
+            <td>Prix au carton</td>
+            <td>Quantité disponible</td>
+            <td>Maison</td>
+            <td></td>
+        </tr>
+    </thead>
     <tbody>
         @foreach (var item in Model.Products)
         {
@@ -55,6 +66,9 @@
             </td>
             <td>
                 <button class="p-2 bg-gray-50 hover:bg-gray-100 transition duration-300" onclick="setProductToCart(@item.Id)">Add to cart</button>
+            </td>
+            <td>
+                <button onclick="location.href='/Products/Details/@item.Id'">Détails</button>
             </td>
         </tr>
         }
